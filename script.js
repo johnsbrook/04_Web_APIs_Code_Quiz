@@ -8,10 +8,10 @@ var startQuiz = document.querySelector("#startQuiz");
 var secondsLeft = 60;
 
 function countdown() {
-    var timer = document.querySelector("#countdown");
+    var countdown = document.querySelector("#countdown");
     var timerCountdown = setInterval(function() {
         secondsLeft--;
-        timer.textContent = secondsLeft;
+        countdown.textContent = secondsLeft;
 
         if(secondsLeft === 0) {
             clearInterval(timerCountdown);
