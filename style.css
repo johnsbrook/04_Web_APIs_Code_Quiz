@@ -1,0 +1,13 @@
+header {
+    background-color: lavender;
+}
+
+button {
+    border-radius: 5px;
+}
+
+.codeQuiz {
+    font-size: 48px; 
+    font-weight: 600;
+}
+
