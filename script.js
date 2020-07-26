@@ -8,7 +8,7 @@ var startQuiz = document.querySelector("#startQuiz");
 var secondsLeft = 60;
 
 function countdown() {
-    var timer = document.querySelector("#timer");
+    var timer = document.querySelector("#countdown");
     var timerCountdown = setInterval(function() {
         secondsLeft--;
         timer.textContent = secondsLeft;
