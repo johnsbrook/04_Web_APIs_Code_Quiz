@@ -411,7 +411,7 @@ function youWin() {
     var youWin = document.createElement("img");
         youWin.setAttribute("class", "col-sm-10 mx-auto youWin");
         youWin.setAttribute("id", "youWin");
-        youWin.setAttribute("src", "youWin.gif");
+        youWin.setAttribute("src", "youwin.gif");
         youWin.setAttribute("alt", "Bravo, You WIN!");
         youWin.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(youWin);
