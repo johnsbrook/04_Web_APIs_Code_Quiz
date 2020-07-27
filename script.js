@@ -39,6 +39,7 @@ function gameOver() {
         gameOver.setAttribute("class", "col-sm-10 mx-auto gameOver");
         gameOver.setAttribute("id", "gameOver");
         gameOver.setAttribute("src", "game-over.gif");
+        youWin.setAttribute("alt", "Game Over");
         gameOver.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(gameOver);
 
@@ -411,6 +412,7 @@ function youWin() {
         youWin.setAttribute("class", "col-sm-10 mx-auto youWin");
         youWin.setAttribute("id", "youWin");
         youWin.setAttribute("src", "youWin.gif");
+        youWin.setAttribute("alt", "Bravo, You WIN!");
         youWin.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(youWin);
 
