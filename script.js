@@ -20,7 +20,7 @@ var startQuiz = document.querySelector("#startQuiz");
 // Sets countdown from 60 to 0 seconds
 function timerCountdown() {
 
-    var secondsLeft = 5;    
+    var secondsLeft = 30;    
     var timerCountdown = setInterval(function() {
         secondsLeft--;
         countdown.textContent = secondsLeft;
@@ -60,7 +60,7 @@ function question1() {
 
     var question1Answer1 = document.createElement("button");
         question1Answer1.textContent = "a) Hypertext Markup Link";
-        question1Answer1.setAttribute("class", "question1 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question1Answer1.setAttribute("class", "question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question1Answer1.setAttribute("id", "question1Answer1");
         row1.appendChild(question1Answer1);
 
@@ -69,7 +69,7 @@ function question1() {
 
     var question1Answer2 = document.createElement("button");
         question1Answer2.textContent = "b) Hypertext Markup Language";
-        question1Answer2.setAttribute("class", "question1 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question1Answer2.setAttribute("class", "question1b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question1Answer2.setAttribute("id", "question1Answer2");
         row1.appendChild(question1Answer2);
 
@@ -78,7 +78,7 @@ function question1() {
 
     var question1Answer3 = document.createElement("button");
         question1Answer3.textContent = "c) Hypermarkup Language";
-        question1Answer3.setAttribute("class", "question1 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question1Answer3.setAttribute("class", "question1c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question1Answer3.setAttribute("id", "question1Answer3");
         row1.appendChild(question1Answer3);
     
@@ -87,19 +87,36 @@ function question1() {
 
     var question1Answer4 = document.createElement("button");
         question1Answer4.textContent = "d) Hypermarkup Text Language";
-        question1Answer4.setAttribute("class", "question1 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question1Answer4.setAttribute("class", "question1d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question1Answer4.setAttribute("id", "question1Answer4");
         row1.appendChild(question1Answer4);
 
-    var clickedAnswer = document.querySelector(".question1");
-        clickedAnswer = clickedAnswer.addEventListener("click", function() {
-    
-        quizPage.textContent = "";
+    var clickedAnswerA = document.querySelector(".question1a");
+        clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question2();
     
     });
+    var clickedAnswerB = document.querySelector(".question1b");
+        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
+        question2();
+
+    });
+    var clickedAnswerC = document.querySelector(".question1c");
+        clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
+        question2();
+
+    });
+    var clickedAnswerD = document.querySelector(".question1d");
+        clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
+        question2();
+
+    });
+
 }
 
+
+
+// Question #2 following the same parameters and guidelines as in Question #1 
 function question2() {
 
     quizPage.textContent = "";
@@ -116,7 +133,7 @@ function question2() {
 
     var question2Answer1 = document.createElement("button");
         question2Answer1.textContent = "a) Content Display Network";
-        question2Answer1.setAttribute("class", "question2 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question2Answer1.setAttribute("class", "question2a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question2Answer1.setAttribute("id", "question2Answer1");
         row1.appendChild(question2Answer1);
 
@@ -125,7 +142,7 @@ function question2() {
 
     var question2Answer2 = document.createElement("button");
         question2Answer2.textContent = "b) Content Discretionary Network";
-        question2Answer2.setAttribute("class", "question2 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question2Answer2.setAttribute("class", "question2b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question2Answer2.setAttribute("id", "question2Answer2");
         row1.appendChild(question2Answer2);
 
@@ -134,7 +151,7 @@ function question2() {
 
     var question2Answer3 = document.createElement("button");
         question2Answer3.textContent = "c) Content Depository Network";
-        question2Answer3.setAttribute("class", "question2 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question2Answer3.setAttribute("class", "question2c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question2Answer3.setAttribute("id", "question2Answer3");
         row1.appendChild(question2Answer3);
     
@@ -143,18 +160,35 @@ function question2() {
 
     var question2Answer4 = document.createElement("button");
         question2Answer4.textContent = "d) Content Delivery Network";
-        question2Answer4.setAttribute("class", "question2 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question2Answer4.setAttribute("class", "question2d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question2Answer4.setAttribute("id", "question2Answer4");
         row1.appendChild(question2Answer4);
 
-    var clickedAnswer2 = document.querySelector(".question2");
-        clickedAnswer2 = clickedAnswer2.addEventListener("click", function() {
-    
+    var clickedAnswerA = document.querySelector(".question2a");
+        clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question3();
     
     });
+    var clickedAnswerB = document.querySelector(".question2b");
+        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
+        question3();
+
+    });
+    var clickedAnswerC = document.querySelector(".question2c");
+        clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
+        question3();
+
+    });
+    var clickedAnswerD = document.querySelector(".question2d");
+        clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
+        question3();
+
+    });
+       
 }
 
+
+// Question #3 
 function question3() {
 
     quizPage.textContent = "";
@@ -171,7 +205,7 @@ function question3() {
 
     var question3Answer1 = document.createElement("button");
         question3Answer1.textContent = 'a) <link type="" href="">';
-        question3Answer1.setAttribute("class", "question3 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question3Answer1.setAttribute("class", "question3a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer1.setAttribute("id", "question3Answer1");
         row1.appendChild(question3Answer1);
 
@@ -180,7 +214,7 @@ function question3() {
 
     var question3Answer2 = document.createElement("button");
         question3Answer2.textContent = 'b) <link rel="" src="">;'
-        question3Answer2.setAttribute("class", "question3 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question3Answer2.setAttribute("class", "question3b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer2.setAttribute("id", "question3Answer2");
         row1.appendChild(question3Answer2);
 
@@ -189,7 +223,7 @@ function question3() {
 
     var question3Answer3 = document.createElement("button");
         question3Answer3.textContent = 'c) <link rel="" href="">';
-        question3Answer3.setAttribute("class", "question3 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question3Answer3.setAttribute("class", "question3c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer3.setAttribute("id", "question3Answer3");
         row1.appendChild(question3Answer3);
     
@@ -198,19 +232,37 @@ function question3() {
 
     var question3Answer4 = document.createElement("button");
         question3Answer4.textContent = 'a) <link type="" src="">';
-        question3Answer4.setAttribute("class", "question3 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question3Answer4.setAttribute("class", "question3d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer4.setAttribute("id", "question3Answer4");
         row1.appendChild(question3Answer4);
 
-    var clickedAnswer3 = document.querySelector(".question3");
-        clickedAnswer3 = clickedAnswer3.addEventListener("click", function() {
-    
-        question3();
+    var clickedAnswerA = document.querySelector(".question3a");
+        clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
+        question4();
     
     });
+    var clickedAnswerB = document.querySelector(".question3b");
+        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
+        question4();
+
+    });
+    var clickedAnswerC = document.querySelector(".question3c");
+        clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
+        question4();
+
+    });
+    var clickedAnswerD = document.querySelector(".question3d");
+        clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
+        question4();
+
+    });
+    
+
 }
 
-function question2() {
+
+// Question #4
+function question4() {
 
     quizPage.textContent = "";
 
@@ -219,48 +271,148 @@ function question2() {
         row1.setAttribute("id", "row1");
         quizPage.appendChild(row1);
 
-    var question2 = document.createElement("h1");
-        question2.textContent = "What's a CDN?";
-        question2.setAttribute("style", "display-5");
-        row1.appendChild(question2);
+    var question4 = document.createElement("h1");
+        question4.textContent = "This is Question #4";
+        question4.setAttribute("style", "display-5");
+        row1.appendChild(question4);
 
-    var question2Answer1 = document.createElement("button");
-        question2Answer1.textContent = "a) Content Display Network";
-        question2Answer1.setAttribute("class", "question2 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question2Answer1.setAttribute("id", "question2Answer1");
-        row1.appendChild(question2Answer1);
+    var question4Answer1 = document.createElement("button");
+        question4Answer1.textContent = "a) Content Display Network";
+        question4Answer1.setAttribute("class", "question4a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question4Answer1.setAttribute("id", "question4Answer1");
+        row1.appendChild(question4Answer1);
 
     var br1 = document.createElement("br");
         row1.appendChild(br1);
 
-    var question2Answer2 = document.createElement("button");
-        question2Answer2.textContent = "b) Content Discretionary Network";
-        question2Answer2.setAttribute("class", "question2 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question2Answer2.setAttribute("id", "question2Answer2");
-        row1.appendChild(question2Answer2);
+    var question4Answer2 = document.createElement("button");
+        question4Answer2.textContent = "b) Content Discretionary Network";
+        question4Answer2.setAttribute("class", "question4b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question4Answer2.setAttribute("id", "question4Answer2");
+        row1.appendChild(question4Answer2);
 
     var br2 = document.createElement("br");
         row1.appendChild(br2);
 
-    var question2Answer3 = document.createElement("button");
-        question2Answer3.textContent = "c) Content Depository Network";
-        question2Answer3.setAttribute("class", "question2 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question2Answer3.setAttribute("id", "question2Answer3");
-        row1.appendChild(question2Answer3);
+    var question4Answer3 = document.createElement("button");
+        question4Answer3.textContent = "c) Content Depository Network";
+        question4Answer3.setAttribute("class", "question4c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question4Answer3.setAttribute("id", "question4Answer3");
+        row1.appendChild(question4Answer3);
     
     var br3 = document.createElement("br");
         row1.appendChild(br3);
 
-    var question2Answer4 = document.createElement("button");
-        question2Answer4.textContent = "d) Content Delivery Network";
-        question2Answer4.setAttribute("class", "question2 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question2Answer4.setAttribute("id", "question2Answer4");
-        row1.appendChild(question2Answer4);
+    var question4Answer4 = document.createElement("button");
+        question4Answer4.textContent = "d) Content Delivery Network";
+        question4Answer4.setAttribute("class", "question4d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question4Answer4.setAttribute("id", "question4Answer4");
+        row1.appendChild(question4Answer4);
 
-    var clickedAnswer2 = document.querySelector(".question2");
-        clickedAnswer2 = clickedAnswer2.addEventListener("click", function() {
-    
-        question3();
+    var clickedAnswerA = document.querySelector(".question4a");
+        clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
+        question5();
     
     });
+    var clickedAnswerB = document.querySelector(".question4b");
+        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
+        question5();
+
+    });
+    var clickedAnswerC = document.querySelector(".question4c");
+        clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
+        question5();
+
+    });
+    var clickedAnswerD = document.querySelector(".question4d");
+        clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
+        question5();
+
+    });
+
+}
+
+
+// Question #5
+function question5() {
+
+    quizPage.textContent = "";
+
+    var row1 = document.createElement("div");
+        row1.setAttribute("class", "col-sm-10 mx-auto");
+        row1.setAttribute("id", "row1");
+        quizPage.appendChild(row1);
+
+    var question5 = document.createElement("h1");
+        question5.textContent = "This is question #5";
+        question5.setAttribute("style", "display-5");
+        row1.appendChild(question5);
+
+    var question5Answer1 = document.createElement("button");
+        question5Answer1.textContent = 'a) <link type="" href="">';
+        question5Answer1.setAttribute("class", "question5a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question5Answer1.setAttribute("id", "question5Answer1");
+        row1.appendChild(question5Answer1);
+
+    var br1 = document.createElement("br");
+        row1.appendChild(br1);
+
+    var question5Answer2 = document.createElement("button");
+        question5Answer2.textContent = 'b) <link rel="" src="">;'
+        question5Answer2.setAttribute("class", "question5b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question5Answer2.setAttribute("id", "question5Answer2");
+        row1.appendChild(question5Answer2);
+
+    var br2 = document.createElement("br");
+        row1.appendChild(br2);
+
+    var question5Answer3 = document.createElement("button");
+        question5Answer3.textContent = 'c) <link rel="" href="">';
+        question5Answer3.setAttribute("class", "question5c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question5Answer3.setAttribute("id", "question5Answer3");
+        row1.appendChild(question5Answer3);
+    
+    var br3 = document.createElement("br");
+        row1.appendChild(br3);
+
+    var question5Answer4 = document.createElement("button");
+        question5Answer4.textContent = 'a) <link type="" src="">';
+        question5Answer4.setAttribute("class", "question5d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+        question5Answer4.setAttribute("id", "question5Answer4");
+        row1.appendChild(question5Answer4);
+
+    var clickedAnswerA = document.querySelector(".question5a");
+        clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
+        youWin();
+    
+    });
+    var clickedAnswerB = document.querySelector(".question5b");
+        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
+        youWin();
+
+    });
+    var clickedAnswerC = document.querySelector(".question5c");
+        clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
+        youWin();
+
+    });
+    var clickedAnswerD = document.querySelector(".question5d");
+        clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
+        youWin();
+
+    });
+    
+}
+
+function youWin() {
+
+    quizPage.textContent = "";
+    var youWin = document.createElement("img");
+        youWin.setAttribute("class", "col-sm-10 mx-auto youWin");
+        youWin.setAttribute("id", "youWin");
+        youWin.setAttribute("src", "youWin.gif");
+        youWin.setAttribute("style", "height: 500px; width: auto;")
+        quizPage.appendChild(youWin);
+
+
 }
