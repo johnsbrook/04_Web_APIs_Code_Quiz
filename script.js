@@ -232,7 +232,7 @@ function question3() {
         row1.appendChild(br3);
 
     var question3Answer4 = document.createElement("button");
-        question3Answer4.textContent = 'a) <link type="" src="">';
+        question3Answer4.textContent = 'd) <link type="" src="">';
         question3Answer4.setAttribute("class", "question3d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer4.setAttribute("id", "question3Answer4");
         row1.appendChild(question3Answer4);
@@ -273,12 +273,12 @@ function question4() {
         quizPage.appendChild(row1);
 
     var question4 = document.createElement("h1");
-        question4.textContent = "This is Question #4";
+        question4.textContent = "What is the symbol to define class?";
         question4.setAttribute("style", "display-5");
         row1.appendChild(question4);
 
     var question4Answer1 = document.createElement("button");
-        question4Answer1.textContent = "a) Content Display Network";
+        question4Answer1.textContent = "a) # (pound or number sign) ";
         question4Answer1.setAttribute("class", "question4a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question4Answer1.setAttribute("id", "question4Answer1");
         row1.appendChild(question4Answer1);
@@ -287,7 +287,7 @@ function question4() {
         row1.appendChild(br1);
 
     var question4Answer2 = document.createElement("button");
-        question4Answer2.textContent = "b) Content Discretionary Network";
+        question4Answer2.textContent = "b) . (period)";
         question4Answer2.setAttribute("class", "question4b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question4Answer2.setAttribute("id", "question4Answer2");
         row1.appendChild(question4Answer2);
@@ -296,7 +296,7 @@ function question4() {
         row1.appendChild(br2);
 
     var question4Answer3 = document.createElement("button");
-        question4Answer3.textContent = "c) Content Depository Network";
+        question4Answer3.textContent = "c) { } (curly brackets)";
         question4Answer3.setAttribute("class", "question4c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question4Answer3.setAttribute("id", "question4Answer3");
         row1.appendChild(question4Answer3);
@@ -305,7 +305,7 @@ function question4() {
         row1.appendChild(br3);
 
     var question4Answer4 = document.createElement("button");
-        question4Answer4.textContent = "d) Content Delivery Network";
+        question4Answer4.textContent = "d) [ ] (brackets)";
         question4Answer4.setAttribute("class", "question4d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question4Answer4.setAttribute("id", "question4Answer4");
         row1.appendChild(question4Answer4);
@@ -345,12 +345,12 @@ function question5() {
         quizPage.appendChild(row1);
 
     var question5 = document.createElement("h1");
-        question5.textContent = "This is question #5";
+        question5.textContent = "Which type of file you need to create to customize a page's style?";
         question5.setAttribute("style", "display-5");
         row1.appendChild(question5);
 
     var question5Answer1 = document.createElement("button");
-        question5Answer1.textContent = 'a) <link type="" href="">';
+        question5Answer1.textContent = 'a) Class Style Sheet (.css)';
         question5Answer1.setAttribute("class", "question5a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question5Answer1.setAttribute("id", "question5Answer1");
         row1.appendChild(question5Answer1);
@@ -359,7 +359,7 @@ function question5() {
         row1.appendChild(br1);
 
     var question5Answer2 = document.createElement("button");
-        question5Answer2.textContent = 'b) <link rel="" src="">;'
+        question5Answer2.textContent = 'b) Cascading Style File (.css)'
         question5Answer2.setAttribute("class", "question5b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question5Answer2.setAttribute("id", "question5Answer2");
         row1.appendChild(question5Answer2);
@@ -368,7 +368,7 @@ function question5() {
         row1.appendChild(br2);
 
     var question5Answer3 = document.createElement("button");
-        question5Answer3.textContent = 'c) <link rel="" href="">';
+        question5Answer3.textContent = 'c) Classifying Stylesheet (.css)';
         question5Answer3.setAttribute("class", "question5c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question5Answer3.setAttribute("id", "question5Answer3");
         row1.appendChild(question5Answer3);
@@ -377,7 +377,7 @@ function question5() {
         row1.appendChild(br3);
 
     var question5Answer4 = document.createElement("button");
-        question5Answer4.textContent = 'a) <link type="" src="">';
+        question5Answer4.textContent = 'd) Cascading Style Sheets (.css)';
         question5Answer4.setAttribute("class", "question5d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question5Answer4.setAttribute("id", "question5Answer4");
         row1.appendChild(question5Answer4);
