@@ -18,10 +18,14 @@ var startQuiz = document.querySelector("#startQuiz");
 
 
 // Sets countdown from 60 to 0 seconds
+
+var secondsLeft;
+var timerCountdown;
+
 function timerCountdown() {
 
-    var secondsLeft = 30;    
-    var timerCountdown = setInterval(function() {
+        secondsLeft = 5;    
+        timerCountdown = setInterval(function() {
         secondsLeft--;
         countdown.textContent = secondsLeft;
 
@@ -39,7 +43,7 @@ function gameOver() {
         gameOver.setAttribute("class", "col-sm-10 mx-auto gameOver");
         gameOver.setAttribute("id", "gameOver");
         gameOver.setAttribute("src", "game-over.gif");
-        youWin.setAttribute("alt", "Game Over");
+        gameOver.setAttribute("alt", "Game Over");
         gameOver.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(gameOver);
 
@@ -416,5 +420,12 @@ function youWin() {
         youWin.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(youWin);
 
+    stopTimer();
 
 }
+
+function stopTimer() {
+    countdown.textContent = "You WIN";
+    clearInterval(timerCountdown);
+}  
+
