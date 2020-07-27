@@ -17,14 +17,13 @@ var startQuiz = document.querySelector("#startQuiz");
     });
 
 
-// Sets countdown from 60 to 0 seconds
-
+// Sets countdown from 60 to 0 seconds and sends to gameOver() function
 var secondsLeft;
 var timerCountdown;
 
 function timerCountdown() {
 
-        secondsLeft = 5;    
+        secondsLeft = 30;    
         timerCountdown = setInterval(function() {
         secondsLeft--;
         countdown.textContent = secondsLeft;
@@ -36,6 +35,13 @@ function timerCountdown() {
     }, 1000);
 }
 
+// Stops Timer if user finishes game
+function stopTimer() {
+    countdown.textContent = "You WIN";
+    clearInterval(timerCountdown);
+}
+
+// Displays Game Over when user doesn't successfully answer questions
 function gameOver() {
 
     quizPage.textContent = "";
@@ -424,8 +430,5 @@ function youWin() {
 
 }
 
-function stopTimer() {
-    countdown.textContent = "You WIN";
-    clearInterval(timerCountdown);
-}  
+  
 
