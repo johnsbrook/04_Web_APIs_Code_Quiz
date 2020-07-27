@@ -170,7 +170,7 @@ function question3() {
         row1.appendChild(question3);
 
     var question3Answer1 = document.createElement("button");
-        question3Answer1.textContent = 'a) <link rel="" href="">;'
+        question3Answer1.textContent = 'a) <link type="" href="">';
         question3Answer1.setAttribute("class", "question3 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer1.setAttribute("id", "question3Answer1");
         row1.appendChild(question3Answer1);
@@ -179,7 +179,7 @@ function question3() {
         row1.appendChild(br1);
 
     var question3Answer2 = document.createElement("button");
-        question3Answer2.textContent = "b) Content Discretionary Network";
+        question3Answer2.textContent = 'b) <link rel="" src="">;'
         question3Answer2.setAttribute("class", "question3 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer2.setAttribute("id", "question3Answer2");
         row1.appendChild(question3Answer2);
@@ -188,7 +188,7 @@ function question3() {
         row1.appendChild(br2);
 
     var question3Answer3 = document.createElement("button");
-        question3Answer3.textContent = "c) Content Depository Network";
+        question3Answer3.textContent = 'c) <link rel="" href="">';
         question3Answer3.setAttribute("class", "question3 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer3.setAttribute("id", "question3Answer3");
         row1.appendChild(question3Answer3);
@@ -197,7 +197,7 @@ function question3() {
         row1.appendChild(br3);
 
     var question3Answer4 = document.createElement("button");
-        question3Answer4.textContent = "d) Content Delivery Network";
+        question3Answer4.textContent = 'a) <link type="" src="">';
         question3Answer4.setAttribute("class", "question3 answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer4.setAttribute("id", "question3Answer4");
         row1.appendChild(question3Answer4);
