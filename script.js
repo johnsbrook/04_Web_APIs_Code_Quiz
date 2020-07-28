@@ -41,6 +41,8 @@ function timerCountdown() {
             clearInterval(timerCountdown);
             countdown.textContent = 0;
             gameOver();
+            enterScore();
+            stopTimer();
         }
     }, 1000);
 }
@@ -325,7 +327,7 @@ function question4() {
     var clickedAnswerA = document.querySelector(".question4a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question5();
-    
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerB = document.querySelector(".question4b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
@@ -401,23 +403,40 @@ function question5() {
         secondsLeft = secondsLeft - 10;
         if (secondsLeft < 1) {
             gameOver(); 
+            enterScore();
+            stopTimer();
         } else { 
             youWin();
             stopTimer();
-          };
-        
-    
-        
+          };       
     });
     var clickedAnswerB = document.querySelector(".question5b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
         youWin();
         secondsLeft = secondsLeft - 10;
+        if (secondsLeft < 1) {
+            gameOver(); 
+            enterScore();
+            stopTimer();
+        } else { 
+            youWin();
+            stopTimer();
+          };       
+
     });
     var clickedAnswerC = document.querySelector(".question5c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         youWin();
         secondsLeft = secondsLeft - 10;
+                if (secondsLeft < 1) {
+            gameOver(); 
+            enterScore();
+            stopTimer();
+        } else { 
+            youWin();
+            stopTimer();
+          };       
+
     });
     var clickedAnswerD = document.querySelector(".question5d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
@@ -426,6 +445,7 @@ function question5() {
         score.textContent = gameScore;
         console.log(gameScore);
         enterScore();
+        stopTimer();
     });
     
 }
@@ -470,7 +490,7 @@ function enterScore() {
         finalScore.appendChild(createScore);
         console.log(createScore);
 
-    stopTimer();
+    
 }
 
 // Stops Timer if user finishes game
@@ -478,7 +498,7 @@ function stopTimer() {
     countdown.textContent = "CODING RULES!";
     countdown.setAttribute("style", "color: red; font-weight: bold;");
     clearInterval(timerCountdown);
-
+    
 }
 
 
