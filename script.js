@@ -113,23 +113,23 @@ function question1() {
     var clickedAnswerA = document.querySelector(".question1a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question2();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     var clickedAnswerB = document.querySelector(".question1b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {        
         question2();
-        gameScore = gameScore + 300;
+        gameScore += 300;
         score.textContent = gameScore;
     });
     var clickedAnswerC = document.querySelector(".question1c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question2();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     var clickedAnswerD = document.querySelector(".question1d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         question2();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
 
     
@@ -190,22 +190,22 @@ function question2() {
     var clickedAnswerA = document.querySelector(".question2a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question3();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     var clickedAnswerB = document.querySelector(".question2b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
         question3();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     var clickedAnswerC = document.querySelector(".question2c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question3();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     var clickedAnswerD = document.querySelector(".question2d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         question3();
-        gameScore = gameScore + 600;
+        gameScore += 600;
         score.textContent = gameScore;
     });
        
@@ -265,23 +265,23 @@ function question3() {
     var clickedAnswerA = document.querySelector(".question3a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question4();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     var clickedAnswerB = document.querySelector(".question3b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
         question4();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     var clickedAnswerC = document.querySelector(".question3c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question4();
-        gameScore = gameScore + 450;
+        gameScore += 450;
         score.textContent = gameScore;
     });
     var clickedAnswerD = document.querySelector(".question3d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         question4();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     
 
@@ -341,23 +341,23 @@ function question4() {
     var clickedAnswerA = document.querySelector(".question4a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question5();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     var clickedAnswerB = document.querySelector(".question4b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
         question5();
-        gameScore = gameScore + 150;
+        gameScore += 150;
         score.textContent = gameScore;
     });
     var clickedAnswerC = document.querySelector(".question4c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question5();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
     var clickedAnswerD = document.querySelector(".question4d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         question5();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
     });
 
 }
@@ -415,7 +415,7 @@ function question5() {
 
     var clickedAnswerA = document.querySelector(".question5a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
         if (secondsLeft < 1) {
             gameOver(); 
             enterScore();
@@ -428,7 +428,7 @@ function question5() {
     var clickedAnswerB = document.querySelector(".question5b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
         youWin();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
         if (secondsLeft < 1) {
             gameOver(); 
             enterScore();
@@ -442,7 +442,7 @@ function question5() {
     var clickedAnswerC = document.querySelector(".question5c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         youWin();
-        secondsLeft = secondsLeft - 10;
+        secondsLeft -= 10;
                 if (secondsLeft < 1) {
             gameOver(); 
             enterScore();
@@ -456,7 +456,7 @@ function question5() {
     var clickedAnswerD = document.querySelector(".question5d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         youWin();
-        gameScore = gameScore + 450;
+        gameScore += 450;
         score.textContent = gameScore;
         console.log(gameScore);
         enterScore();
