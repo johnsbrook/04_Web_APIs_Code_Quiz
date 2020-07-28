@@ -55,16 +55,22 @@ function question1() {
     finalScore.textContent = "";
 
     // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
-    var row1 = document.createElement("div");
-        row1.setAttribute("class", "col-sm-10 mx-auto");
-        row1.setAttribute("id", "row1");
-        quizPage.appendChild(row1);
+
+    $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+    $("#row1").append('<h1>What does the acronym HTML stands for?</h1>');
+
+
+
+    // var row1 = document.createElement("div");
+    //     row1.setAttribute("class", "col-sm-10 mx-auto");
+    //     row1.setAttribute("id", "row1");
+    //     quizPage.appendChild(row1);
 
     // Creates <h1> element and displays first question's HTML elemnents
-    var question1 = document.createElement("h1");
-        question1.textContent = "What does the acronym HTML stands for? ";
-        question1.setAttribute("style", "display-5");
-        row1.appendChild(question1);
+    // var question1 = document.createElement("h1");
+    //     question1.textContent = "What does the acronym HTML stands for? ";
+    //     question1.setAttribute("style", "display-5");
+    //     row1.appendChild(question1);
 
     // Creates <button> element, establishes possible answer with class and ID, and it appends to ID element #row1
     var question1Answer1 = document.createElement("button");
@@ -284,7 +290,6 @@ function question3() {
         secondsLeft -= 10;
     });
     
-
 }
 
 
@@ -476,7 +481,7 @@ function youWin() {
         youWin.setAttribute("alt", "Bravo, You WIN!");
         youWin.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(youWin);
-    
+        promptScore();
         
     };
 
@@ -491,20 +496,21 @@ function gameOver() {
         gameOver.setAttribute("alt", "Game Over");
         gameOver.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(gameOver);
-        
+        promptScore();
 }
 
 stopTimer();
 
 function enterScore() {
     // var finalScore = document.querySelector("#finalScore");
+    
     var createScore = document.createElement("div");
         createScore.setAttribute("class", "col-sm-10 mx-auto");
         createScore.setAttribute("id", "createScore");        
         createScore.textContent = "Your final score is: " + score.textContent;
         finalScore.appendChild(createScore);
         console.log(createScore);
-
+        
     
 }
 
@@ -512,10 +518,14 @@ function enterScore() {
 function stopTimer() {
     countdown.textContent = "CODING RULES!";
     countdown.setAttribute("style", "color: red; font-weight: bold;");
-    clearInterval(timerCountdown);
-    
+    clearInterval(timerCountdown); 
 }
 
+function promptScore() {
+    var promptScore = prompt("Enter your name: ")
+        storedScore = promptScore + ", your score is " + score.textContent +  "!";
+        console.log(storedScore);
+}
 
 
 
