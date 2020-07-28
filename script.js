@@ -5,6 +5,9 @@ var intro = document.querySelector("#intro");
 var introParagraph = document.querySelector("#introParagraph");
 var goodLuck = document.querySelector("#goodLuck");
 var countdown = document.querySelector("#countdown");
+var score = document.querySelector('#score');
+var gameScore = 0;
+    score.textContent = gameScore;
 
 
 // Creates function to click and start countdown and quiz
@@ -52,8 +55,10 @@ function gameOver() {
         gameOver.setAttribute("alt", "Game Over");
         gameOver.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(gameOver);
-
 }
+
+
+
 
 function question1() {
 
@@ -83,6 +88,8 @@ function question1() {
         question1Answer2.setAttribute("class", "question1b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question1Answer2.setAttribute("id", "question1Answer2");
         row1.appendChild(question1Answer2);
+        
+
 
     var br2 = document.createElement("br");
         row1.appendChild(br2);
@@ -108,13 +115,15 @@ function question1() {
     
     });
     var clickedAnswerB = document.querySelector(".question1b");
-        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
+        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {        
         question2();
-
+        gameScore = gameScore + 300;
+        score.textContent = gameScore;
     });
     var clickedAnswerC = document.querySelector(".question1c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question2();
+       
 
     });
     var clickedAnswerD = document.querySelector(".question1d");
@@ -123,6 +132,7 @@ function question1() {
 
     });
 
+    
 }
 
 
@@ -193,7 +203,8 @@ function question2() {
     var clickedAnswerD = document.querySelector(".question2d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         question3();
-
+        gameScore = gameScore + 600;
+        score.textContent = gameScore;
     });
        
 }
@@ -224,7 +235,7 @@ function question3() {
         row1.appendChild(br1);
 
     var question3Answer2 = document.createElement("button");
-        question3Answer2.textContent = 'b) <link rel="" src="">;'
+        question3Answer2.textContent = 'b) <link rel="" src="">';
         question3Answer2.setAttribute("class", "question3b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question3Answer2.setAttribute("id", "question3Answer2");
         row1.appendChild(question3Answer2);
@@ -260,6 +271,8 @@ function question3() {
     var clickedAnswerC = document.querySelector(".question3c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question4();
+        gameScore = gameScore + 450;
+        score.textContent = gameScore;
 
     });
     var clickedAnswerD = document.querySelector(".question3d");
@@ -328,7 +341,8 @@ function question4() {
     var clickedAnswerB = document.querySelector(".question4b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
         question5();
-
+        gameScore = gameScore + 150;
+        score.textContent = gameScore;
     });
     var clickedAnswerC = document.querySelector(".question4c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
@@ -410,7 +424,8 @@ function question5() {
     var clickedAnswerD = document.querySelector(".question5d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         youWin();
-
+        gameScore = gameScore + 450;
+        score.textContent = gameScore;
     });
     
 }
@@ -430,5 +445,4 @@ function youWin() {
 
 }
 
-  
 
