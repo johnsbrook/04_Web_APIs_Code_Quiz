@@ -55,7 +55,6 @@ function question1() {
     finalScore.textContent = "";
 
     // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
-
     $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
     $("#row1").append('<h1>What does the acronym HTML stands for?</h1>');
     $('#row1').append('<button id="question1Answer1" class="wrongAnswer question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> a) Hypertext Markup Link</button>');
@@ -66,40 +65,21 @@ function question1() {
     $('#row1').append('<br>');
     $('#row1').append('<button id="question1Answer4" class="wrongAnswer question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> d) Hypermarkup Text Language</button>');
 
+    if ($(".wrongAnswer")) {
+        $('.wrongAnswer').click(function(){
+            secondsLeft -=10;
+            question2();
+        })
+    }
 
-
-
-    //      ***********************************
-    //      * SECTION WITH ANSWERS VALIDATION *
-    //      ***********************************
-    //      If answer a) is clicked, then: 
-    //          1) the next question will show up
-    //          2) if the answer of the button created is wrong, then the amount of time left (recorded inside variable secondsLeft) 
-    //              will be decreased by 10 seconds
-    //          3) else, the game score will be increased by the assigned answer value, by difficulty. 
-    var clickedAnswerA = document.querySelector(".question1a");
-        clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
-        question2();
-        secondsLeft -= 10;
-    });
-    var clickedAnswerB = document.querySelector(".question1b");
-        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {        
-        question2();
-        gameScore += 300;
-        score.textContent = gameScore;
-    });
-    var clickedAnswerC = document.querySelector(".question1c");
-        clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
-        question2();
-        secondsLeft -= 10;
-    });
-    var clickedAnswerD = document.querySelector(".question1d");
-        clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
-        question2();
-        secondsLeft -= 10;
-    });
-
-    
+    if ($('.correctAnswer')) {
+        $('.correctAnswer').click(function(){
+            gameScore += 300;
+            score.textContent = gameScore;
+            question2();
+        })
+    }
+   
 }
 
 
@@ -552,3 +532,36 @@ function promptScore() {
     //     question1Answer4.setAttribute("class", "question1d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
     //     question1Answer4.setAttribute("id", "question1Answer4");
     //     row1.appendChild(question1Answer4);
+
+    
+    //      ***********************************
+    //      * SECTION WITH ANSWERS VALIDATION *
+    //      ***********************************
+    //      If answer a) is clicked, then: 
+    //          1) the next question will show up
+    //          2) if the answer of the button created is wrong, then the amount of time left (recorded inside variable secondsLeft) 
+    //              will be decreased by 10 seconds
+    //          3) else, the game score will be increased by the assigned answer value, by difficulty. 
+    // var clickedAnswerA = document.querySelector(".question1a");
+    //     clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
+    //     question2();
+    //     secondsLeft -= 10;
+    // });
+    // var clickedAnswerB = document.querySelector(".question1b");
+    //     clickedAnswerB = clickedAnswerB.addEventListener("click", function() {        
+    //     question2();
+    //     gameScore += 300;
+    //     score.textContent = gameScore;
+    // });
+    // var clickedAnswerC = document.querySelector(".question1c");
+    //     clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
+    //     question2();
+    //     secondsLeft -= 10;
+    // });
+    // var clickedAnswerD = document.querySelector(".question1d");
+    //     clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
+    //     question2();
+    //     secondsLeft -= 10;
+    // });
+
+ 
