@@ -58,54 +58,15 @@ function question1() {
 
     $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
     $("#row1").append('<h1>What does the acronym HTML stands for?</h1>');
+    $('#row1').append('<button id="question1Answer1" class="wrongAnswer question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> a) Hypertext Markup Link</button>');
+    $('#row1').append('<br>');
+    $('#row1').append('<button id="question1Answer2" class="correctAnswer question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> b) Hypertext Markup Language</button>');
+    $('#row1').append('<br>');
+    $('#row1').append('<button id="question1Answer3" class="wrongAnswer question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> c) Hypermarkup Language</button>');
+    $('#row1').append('<br>');
+    $('#row1').append('<button id="question1Answer4" class="wrongAnswer question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> d) Hypermarkup Text Language</button>');
 
 
-
-    // var row1 = document.createElement("div");
-    //     row1.setAttribute("class", "col-sm-10 mx-auto");
-    //     row1.setAttribute("id", "row1");
-    //     quizPage.appendChild(row1);
-
-    // Creates <h1> element and displays first question's HTML elemnents
-    // var question1 = document.createElement("h1");
-    //     question1.textContent = "What does the acronym HTML stands for? ";
-    //     question1.setAttribute("style", "display-5");
-    //     row1.appendChild(question1);
-
-    // Creates <button> element, establishes possible answer with class and ID, and it appends to ID element #row1
-    var question1Answer1 = document.createElement("button");
-        question1Answer1.textContent = "a) Hypertext Markup Link";
-        question1Answer1.setAttribute("class", "question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question1Answer1.setAttribute("id", "question1Answer1");
-        row1.appendChild(question1Answer1);
-
-    // Creates <br> element and appends it to ID element #row1
-    var br1 = document.createElement("br");
-        row1.appendChild(br1);
-
-    var question1Answer2 = document.createElement("button");
-        question1Answer2.textContent = "b) Hypertext Markup Language";
-        question1Answer2.setAttribute("class", "question1b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question1Answer2.setAttribute("id", "question1Answer2");
-        row1.appendChild(question1Answer2);     
-
-    var br2 = document.createElement("br");
-        row1.appendChild(br2);
-
-    var question1Answer3 = document.createElement("button");
-        question1Answer3.textContent = "c) Hypermarkup Language";
-        question1Answer3.setAttribute("class", "question1c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question1Answer3.setAttribute("id", "question1Answer3");
-        row1.appendChild(question1Answer3);
-    
-    var br3 = document.createElement("br");
-        row1.appendChild(br3);
-
-    var question1Answer4 = document.createElement("button");
-        question1Answer4.textContent = "d) Hypermarkup Text Language";
-        question1Answer4.setAttribute("class", "question1d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question1Answer4.setAttribute("id", "question1Answer4");
-        row1.appendChild(question1Answer4);
 
 
     //      ***********************************
@@ -425,9 +386,12 @@ function question5() {
             gameOver(); 
             enterScore();
             stopTimer();
+            promptScore();
+
         } else { 
             youWin();
             stopTimer();
+            promptScore();
           };       
     });
     var clickedAnswerB = document.querySelector(".question5b");
@@ -438,9 +402,11 @@ function question5() {
             gameOver(); 
             enterScore();
             stopTimer();
+            promptScore();
         } else { 
             youWin();
             stopTimer();
+            promptScore();
           };       
 
     });
@@ -452,9 +418,11 @@ function question5() {
             gameOver(); 
             enterScore();
             stopTimer();
+            promptScore();
         } else { 
             youWin();
             stopTimer();
+            promptScore();
           };       
 
     });
@@ -466,6 +434,7 @@ function question5() {
         console.log(gameScore);
         enterScore();
         stopTimer();
+        promptScore();
     });
     
 }
@@ -481,7 +450,8 @@ function youWin() {
         youWin.setAttribute("alt", "Bravo, You WIN!");
         youWin.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(youWin);
-        promptScore();
+
+  
         
     };
 
@@ -496,7 +466,9 @@ function gameOver() {
         gameOver.setAttribute("alt", "Game Over");
         gameOver.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(gameOver);
-        promptScore();
+
+
+        
 }
 
 stopTimer();
@@ -511,6 +483,7 @@ function enterScore() {
         finalScore.appendChild(createScore);
         console.log(createScore);
         
+
     
 }
 
@@ -524,6 +497,7 @@ function stopTimer() {
 function promptScore() {
     var promptScore = prompt("Enter your name: ")
         storedScore = promptScore + ", your score is " + score.textContent +  "!";
+        localStorage.setItem("storedScored", JSON.stringify(storedScore));
         console.log(storedScore);
 }
 
@@ -531,3 +505,50 @@ function promptScore() {
 
 
 
+
+    // var row1 = document.createElement("div");
+    //     row1.setAttribute("class", "col-sm-10 mx-auto");
+    //     row1.setAttribute("id", "row1");
+    //     quizPage.appendChild(row1);
+
+    // Creates <h1> element and displays first question's HTML elemnents
+    // var question1 = document.createElement("h1");
+    //     question1.textContent = "What does the acronym HTML stands for? ";
+    //     question1.setAttribute("style", "display-5");
+    //     row1.appendChild(question1);
+
+    // Creates <button> element, establishes possible answer with class and ID, and it appends to ID element #row1
+    // var question1Answer1 = document.createElement("button");
+    //     question1Answer1.textContent = "a) Hypertext Markup Link";
+    //     question1Answer1.setAttribute("class", "question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+    //     question1Answer1.setAttribute("id", "question1Answer1");
+    //     row1.appendChild(question1Answer1);
+    
+    // Creates <br> element and appends it to ID element #row1
+    // var br1 = document.createElement("br");
+    //     row1.appendChild(br1);
+
+    // var question1Answer2 = document.createElement("button");
+    //     question1Answer2.textContent = "b) Hypertext Markup Language";
+    //     question1Answer2.setAttribute("class", "question1b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+    //     question1Answer2.setAttribute("id", "question1Answer2");
+    //     row1.appendChild(question1Answer2);     
+
+    // var br2 = document.createElement("br");
+    //     row1.appendChild(br2);
+
+    // var question1Answer3 = document.createElement("button");
+    //     question1Answer3.textContent = "c) Hypermarkup Language";
+    //     question1Answer3.setAttribute("class", "question1c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+    //     question1Answer3.setAttribute("id", "question1Answer3");
+    //     row1.appendChild(question1Answer3);
+    
+    // var br3 = document.createElement("br");
+    //     row1.appendChild(br3);
+
+    
+    // var question1Answer4 = document.createElement("button");
+    //     question1Answer4.textContent = "d) Hypermarkup Text Language";
+    //     question1Answer4.setAttribute("class", "question1d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+    //     question1Answer4.setAttribute("id", "question1Answer4");
+    //     row1.appendChild(question1Answer4);
