@@ -82,155 +82,73 @@ function question1() {
    
 }
 
-
-
-// Question #2 following the same parameters and guidelines as in Question #1 
 function question2() {
 
     // Erases quizPage and finalScore to avoid overlapping
     quizPage.textContent = "";
     finalScore.textContent = "";
 
-    var row1 = document.createElement("div");
-        row1.setAttribute("class", "col-sm-10 mx-auto");
-        row1.setAttribute("id", "row1");
-        quizPage.appendChild(row1);
+    // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
+    $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+    $("#row1").append('<h1>What\'s a CDN?</h1>');
+    $('#row1').append('<button id="question2Answer1" class="wrongAnswer question2a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> a) Content Display Network</button>');
+    $('#row1').append('<br>');
+    $('#row1').append('<button id="question2Answer2" class="wrongAnswer question2a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> b) Content Discretionary Network</button>');
+    $('#row1').append('<br>');
+    $('#row1').append('<button id="question2Answer3" class="wrongAnswer question2a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> c) Content Depository Network</button>');
+    $('#row1').append('<br>');
+    $('#row1').append('<button id="question2Answer4" class="correctAnswer question2a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> d) Content Delivery Network</button>');
 
-    var question2 = document.createElement("h1");
-        question2.textContent = "What's a CDN?";
-        question2.setAttribute("style", "display-5");
-        row1.appendChild(question2);
+    if ($(".wrongAnswer")) {
+        $('.wrongAnswer').click(function(){
+            secondsLeft -=10;
+            question3();
+        })
+    }
 
-    var question2Answer1 = document.createElement("button");
-        question2Answer1.textContent = "a) Content Display Network";
-        question2Answer1.setAttribute("class", "question2a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question2Answer1.setAttribute("id", "question2Answer1");
-        row1.appendChild(question2Answer1);
-
-    var br1 = document.createElement("br");
-        row1.appendChild(br1);
-
-    var question2Answer2 = document.createElement("button");
-        question2Answer2.textContent = "b) Content Discretionary Network";
-        question2Answer2.setAttribute("class", "question2b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question2Answer2.setAttribute("id", "question2Answer2");
-        row1.appendChild(question2Answer2);
-
-    var br2 = document.createElement("br");
-        row1.appendChild(br2);
-
-    var question2Answer3 = document.createElement("button");
-        question2Answer3.textContent = "c) Content Depository Network";
-        question2Answer3.setAttribute("class", "question2c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question2Answer3.setAttribute("id", "question2Answer3");
-        row1.appendChild(question2Answer3);
-    
-    var br3 = document.createElement("br");
-        row1.appendChild(br3);
-
-    var question2Answer4 = document.createElement("button");
-        question2Answer4.textContent = "d) Content Delivery Network";
-        question2Answer4.setAttribute("class", "question2d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question2Answer4.setAttribute("id", "question2Answer4");
-        row1.appendChild(question2Answer4);
-
-    var clickedAnswerA = document.querySelector(".question2a");
-        clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
-        question3();
-        secondsLeft -= 10;
-    });
-    var clickedAnswerB = document.querySelector(".question2b");
-        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
-        question3();
-        secondsLeft -= 10;
-    });
-    var clickedAnswerC = document.querySelector(".question2c");
-        clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
-        question3();
-        secondsLeft -= 10;
-    });
-    var clickedAnswerD = document.querySelector(".question2d");
-        clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
-        question3();
-        gameScore += 600;
-        score.textContent = gameScore;
-    });
-       
+    if ($('.correctAnswer')) {
+        $('.correctAnswer').click(function(){
+            gameScore += 600;
+            score.textContent = gameScore;
+            question3();
+        })
+    }
+   
 }
 
 
-// Question #3 
 function question3() {
 
     // Erases quizPage and finalScore to avoid overlapping
     quizPage.textContent = "";
     finalScore.textContent = "";
 
-    var row1 = document.createElement("div");
-        row1.setAttribute("class", "col-sm-10 mx-auto");
-        row1.setAttribute("id", "row1");
-        quizPage.appendChild(row1);
+    // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
+    $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+    $("#row1").append('<h1>What do you use to link a stylesheet?</h1>');
+    $('#row1').append('<button id="question3Answer1" class="wrongAnswer question3a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> a) <link type="" href=""</button>');
+    $('#row1').append('<br>');
+    $('#row1').append('<button id="question3Answer2" class="wrongAnswer question3a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> b) <link rel="" src=""></button>');
+    $('#row1').append('<br>');
+    $('#row1').append('<button id="question3Answer3" class="correctAnswer question3a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> c) <link rel="" href=""></button>');
+    $('#row1').append('<br>');
+    $('#row1').append('<button id="question3Answer4" class="wrongAnswer question3a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> d) <link type="" src=""></button>');
 
-    var question3 = document.createElement("h1");
-        question3.textContent = "What do you use to link a stylesheet?";
-        question3.setAttribute("style", "display-5");
-        row1.appendChild(question3);
+    if ($(".wrongAnswer")) {
+        $('.wrongAnswer').click(function(){
+            secondsLeft -=10;
+            question3();
+        })
+    }
 
-    var question3Answer1 = document.createElement("button");
-        question3Answer1.textContent = 'a) <link type="" href="">';
-        question3Answer1.setAttribute("class", "question3a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question3Answer1.setAttribute("id", "question3Answer1");
-        row1.appendChild(question3Answer1);
-
-    var br1 = document.createElement("br");
-        row1.appendChild(br1);
-
-    var question3Answer2 = document.createElement("button");
-        question3Answer2.textContent = 'b) <link rel="" src="">';
-        question3Answer2.setAttribute("class", "question3b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question3Answer2.setAttribute("id", "question3Answer2");
-        row1.appendChild(question3Answer2);
-
-    var br2 = document.createElement("br");
-        row1.appendChild(br2);
-
-    var question3Answer3 = document.createElement("button");
-        question3Answer3.textContent = 'c) <link rel="" href="">';
-        question3Answer3.setAttribute("class", "question3c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question3Answer3.setAttribute("id", "question3Answer3");
-        row1.appendChild(question3Answer3);
-    
-    var br3 = document.createElement("br");
-        row1.appendChild(br3);
-
-    var question3Answer4 = document.createElement("button");
-        question3Answer4.textContent = 'd) <link type="" src="">';
-        question3Answer4.setAttribute("class", "question3d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
-        question3Answer4.setAttribute("id", "question3Answer4");
-        row1.appendChild(question3Answer4);
-
-    var clickedAnswerA = document.querySelector(".question3a");
-        clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
-        question4();
-        secondsLeft -= 10;
-    });
-    var clickedAnswerB = document.querySelector(".question3b");
-        clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
-        question4();
-        secondsLeft -= 10;
-    });
-    var clickedAnswerC = document.querySelector(".question3c");
-        clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
-        question4();
-        gameScore += 450;
-        score.textContent = gameScore;
-    });
-    var clickedAnswerD = document.querySelector(".question3d");
-        clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
-        question4();
-        secondsLeft -= 10;
-    });
-    
+    if ($('.correctAnswer')) {
+        $('.correctAnswer').click(function(){
+            gameScore += 450;
+            score.textContent = gameScore;
+            question3();
+        })
+    }
+   
 }
 
 
@@ -564,4 +482,151 @@ function promptScore() {
     //     secondsLeft -= 10;
     // });
 
+    // function question2() {
+
+//     // Erases quizPage and finalScore to avoid overlapping
+//     quizPage.textContent = "";
+//     finalScore.textContent = "";
+
+//     var row1 = document.createElement("div");
+//         row1.setAttribute("class", "col-sm-10 mx-auto");
+//         row1.setAttribute("id", "row1");
+//         quizPage.appendChild(row1);
+
+//     var question2 = document.createElement("h1");
+//         question2.textContent = "What's a CDN?";
+//         question2.setAttribute("style", "display-5");
+//         row1.appendChild(question2);
+
+//     var question2Answer1 = document.createElement("button");
+//         question2Answer1.textContent = "a) Content Display Network";
+//         question2Answer1.setAttribute("class", "question2a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+//         question2Answer1.setAttribute("id", "question2Answer1");
+//         row1.appendChild(question2Answer1);
+
+//     var br1 = document.createElement("br");
+//         row1.appendChild(br1);
+
+//     var question2Answer2 = document.createElement("button");
+//         question2Answer2.textContent = "b) Content Discretionary Network";
+//         question2Answer2.setAttribute("class", "question2b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+//         question2Answer2.setAttribute("id", "question2Answer2");
+//         row1.appendChild(question2Answer2);
+
+//     var br2 = document.createElement("br");
+//         row1.appendChild(br2);
+
+//     var question2Answer3 = document.createElement("button");
+//         question2Answer3.textContent = "c) Content Depository Network";
+//         question2Answer3.setAttribute("class", "question2c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+//         question2Answer3.setAttribute("id", "question2Answer3");
+//         row1.appendChild(question2Answer3);
+    
+//     var br3 = document.createElement("br");
+//         row1.appendChild(br3);
+
+//     var question2Answer4 = document.createElement("button");
+//         question2Answer4.textContent = "d) Content Delivery Network";
+//         question2Answer4.setAttribute("class", "question2d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+//         question2Answer4.setAttribute("id", "question2Answer4");
+//         row1.appendChild(question2Answer4);
+
+//     var clickedAnswerA = document.querySelector(".question2a");
+//         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
+//         question3();
+//         secondsLeft -= 10;
+//     });
+//     var clickedAnswerB = document.querySelector(".question2b");
+//         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
+//         question3();
+//         secondsLeft -= 10;
+//     });
+//     var clickedAnswerC = document.querySelector(".question2c");
+//         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
+//         question3();
+//         secondsLeft -= 10;
+//     });
+//     var clickedAnswerD = document.querySelector(".question2d");
+//         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
+//         question3();
+//         gameScore += 600;
+//         score.textContent = gameScore;
+//     });
+       
+// }
  
+
+
+// // Question #3 
+// function question3() {
+
+//     // Erases quizPage and finalScore to avoid overlapping
+//     quizPage.textContent = "";
+//     finalScore.textContent = "";
+
+//     var row1 = document.createElement("div");
+//         row1.setAttribute("class", "col-sm-10 mx-auto");
+//         row1.setAttribute("id", "row1");
+//         quizPage.appendChild(row1);
+
+//     var question3 = document.createElement("h1");
+//         question3.textContent = "What do you use to link a stylesheet?";
+//         question3.setAttribute("style", "display-5");
+//         row1.appendChild(question3);
+
+//     var question3Answer1 = document.createElement("button");
+//         question3Answer1.textContent = 'a) <link type="" href="">';
+//         question3Answer1.setAttribute("class", "question3a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+//         question3Answer1.setAttribute("id", "question3Answer1");
+//         row1.appendChild(question3Answer1);
+
+//     var br1 = document.createElement("br");
+//         row1.appendChild(br1);
+
+//     var question3Answer2 = document.createElement("button");
+//         question3Answer2.textContent = 'b) <link rel="" src="">';
+//         question3Answer2.setAttribute("class", "question3b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+//         question3Answer2.setAttribute("id", "question3Answer2");
+//         row1.appendChild(question3Answer2);
+
+//     var br2 = document.createElement("br");
+//         row1.appendChild(br2);
+
+//     var question3Answer3 = document.createElement("button");
+//         question3Answer3.textContent = 'c) <link rel="" href="">';
+//         question3Answer3.setAttribute("class", "question3c answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+//         question3Answer3.setAttribute("id", "question3Answer3");
+//         row1.appendChild(question3Answer3);
+    
+//     var br3 = document.createElement("br");
+//         row1.appendChild(br3);
+
+//     var question3Answer4 = document.createElement("button");
+//         question3Answer4.textContent = 'd) <link type="" src="">';
+//         question3Answer4.setAttribute("class", "question3d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
+//         question3Answer4.setAttribute("id", "question3Answer4");
+//         row1.appendChild(question3Answer4);
+
+//     var clickedAnswerA = document.querySelector(".question3a");
+//         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
+//         question4();
+//         secondsLeft -= 10;
+//     });
+//     var clickedAnswerB = document.querySelector(".question3b");
+//         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
+//         question4();
+//         secondsLeft -= 10;
+//     });
+//     var clickedAnswerC = document.querySelector(".question3c");
+//         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
+//         question4();
+//         gameScore += 450;
+//         score.textContent = gameScore;
+//     });
+//     var clickedAnswerD = document.querySelector(".question3d");
+//         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
+//         question4();
+//         secondsLeft -= 10;
+//     });
+    
+// }
