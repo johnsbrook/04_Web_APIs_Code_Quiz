@@ -45,29 +45,6 @@ function timerCountdown() {
     }, 1000);
 }
 
-// Stops Timer if user finishes game
-function stopTimer() {
-    countdown.textContent = "You WIN";
-    clearInterval(timerCountdown);
-
-    enterScore();
-}
-
-// Displays Game Over when user doesn't successfully answer questions
-function gameOver() {
-
-    quizPage.textContent = "";
-    var gameOver = document.createElement("img");
-        gameOver.setAttribute("class", "col-sm-10 mx-auto gameOver");
-        gameOver.setAttribute("id", "gameOver");
-        gameOver.setAttribute("src", "game-over.gif");
-        gameOver.setAttribute("alt", "Game Over");
-        gameOver.setAttribute("style", "height: 500px; width: auto;")
-        quizPage.appendChild(gameOver);
-}
-
-
-
 
 function question1() {
 
@@ -447,6 +424,7 @@ function question5() {
         youWin();
         gameScore = gameScore + 450;
         score.textContent = gameScore;
+        console.log(gameScore);
         enterScore();
     });
     
@@ -463,7 +441,23 @@ function youWin() {
         youWin.setAttribute("alt", "Bravo, You WIN!");
         youWin.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(youWin);
+    
+        
     };
+
+// Displays Game Over when user doesn't successfully answer questions
+function gameOver() {
+
+    quizPage.textContent = "";
+    var gameOver = document.createElement("img");
+        gameOver.setAttribute("class", "col-sm-10 mx-auto gameOver");
+        gameOver.setAttribute("id", "gameOver");
+        gameOver.setAttribute("src", "game-over.gif");
+        gameOver.setAttribute("alt", "Game Over");
+        gameOver.setAttribute("style", "height: 500px; width: auto;")
+        quizPage.appendChild(gameOver);
+        
+}
 
 stopTimer();
 
@@ -471,11 +465,22 @@ function enterScore() {
     // var finalScore = document.querySelector("#finalScore");
     var createScore = document.createElement("div");
         createScore.setAttribute("class", "col-sm-10 mx-auto");
-        createScore.setAttribute("id", "createScore");
-        finalScore.appendChild(createScore);
+        createScore.setAttribute("id", "createScore");        
         createScore.textContent = "Your final score is: " + score.textContent;
+        finalScore.appendChild(createScore);
+        console.log(createScore);
+
+    stopTimer();
+}
+
+// Stops Timer if user finishes game
+function stopTimer() {
+    countdown.textContent = "CODING RULES!";
+    countdown.setAttribute("style", "color: red; font-weight: bold;");
+    clearInterval(timerCountdown);
 
 }
+
 
 
 
