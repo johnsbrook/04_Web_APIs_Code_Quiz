@@ -6,8 +6,14 @@ var introParagraph = document.querySelector("#introParagraph");
 var goodLuck = document.querySelector("#goodLuck");
 var countdown = document.querySelector("#countdown");
 var score = document.querySelector('#score');
+
+// Sets initial value for user's game score. 
 var gameScore = 0;
     score.textContent = gameScore;
+
+// Sets initial variable for the user to record score. 
+var finalScore = document.querySelector("#finalScore");
+
 
 
 // Creates function to click and start countdown and quiz
@@ -21,18 +27,19 @@ var startQuiz = document.querySelector("#startQuiz");
 
 
 // Sets countdown from 60 to 0 seconds and sends to gameOver() function
-var secondsLeft;
+var secondsLeft = 30;
 var timerCountdown;
 
 function timerCountdown() {
 
-        secondsLeft = 30;    
+        // secondsLeft = 30;    
         timerCountdown = setInterval(function() {
         secondsLeft--;
         countdown.textContent = secondsLeft;
 
-        if(secondsLeft === 0) {
+        if(secondsLeft < 1) {
             clearInterval(timerCountdown);
+            countdown.textContent = 0;
             gameOver();
         }
     }, 1000);
@@ -42,6 +49,8 @@ function timerCountdown() {
 function stopTimer() {
     countdown.textContent = "You WIN";
     clearInterval(timerCountdown);
+
+    enterScore();
 }
 
 // Displays Game Over when user doesn't successfully answer questions
@@ -63,6 +72,7 @@ function gameOver() {
 function question1() {
 
     quizPage.textContent = "";
+    finalScore.textContent = "";
 
     var row1 = document.createElement("div");
         row1.setAttribute("class", "col-sm-10 mx-auto");
@@ -108,11 +118,12 @@ function question1() {
         question1Answer4.setAttribute("class", "question1d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question1Answer4.setAttribute("id", "question1Answer4");
         row1.appendChild(question1Answer4);
+        
 
     var clickedAnswerA = document.querySelector(".question1a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question2();
-    
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerB = document.querySelector(".question1b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {        
@@ -123,13 +134,12 @@ function question1() {
     var clickedAnswerC = document.querySelector(".question1c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question2();
-       
-
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerD = document.querySelector(".question1d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         question2();
-
+        secondsLeft = secondsLeft - 10;
     });
 
     
@@ -141,6 +151,7 @@ function question1() {
 function question2() {
 
     quizPage.textContent = "";
+    finalScore.textContent = "";
 
     var row1 = document.createElement("div");
         row1.setAttribute("class", "col-sm-10 mx-auto");
@@ -188,17 +199,17 @@ function question2() {
     var clickedAnswerA = document.querySelector(".question2a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question3();
-    
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerB = document.querySelector(".question2b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
         question3();
-
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerC = document.querySelector(".question2c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question3();
-
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerD = document.querySelector(".question2d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
@@ -214,6 +225,7 @@ function question2() {
 function question3() {
 
     quizPage.textContent = "";
+    finalScore.textContent = "";
 
     var row1 = document.createElement("div");
         row1.setAttribute("class", "col-sm-10 mx-auto");
@@ -261,24 +273,23 @@ function question3() {
     var clickedAnswerA = document.querySelector(".question3a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question4();
-    
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerB = document.querySelector(".question3b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
         question4();
-
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerC = document.querySelector(".question3c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question4();
         gameScore = gameScore + 450;
         score.textContent = gameScore;
-
     });
     var clickedAnswerD = document.querySelector(".question3d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         question4();
-
+        secondsLeft = secondsLeft - 10;
     });
     
 
@@ -289,6 +300,7 @@ function question3() {
 function question4() {
 
     quizPage.textContent = "";
+    finalScore.textContent = "";
 
     var row1 = document.createElement("div");
         row1.setAttribute("class", "col-sm-10 mx-auto");
@@ -347,12 +359,12 @@ function question4() {
     var clickedAnswerC = document.querySelector(".question4c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         question5();
-
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerD = document.querySelector(".question4d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         question5();
-
+        secondsLeft = secondsLeft - 10;
     });
 
 }
@@ -362,6 +374,7 @@ function question4() {
 function question5() {
 
     quizPage.textContent = "";
+    finalScore.textContent = "";
 
     var row1 = document.createElement("div");
         row1.setAttribute("class", "col-sm-10 mx-auto");
@@ -408,24 +421,33 @@ function question5() {
 
     var clickedAnswerA = document.querySelector(".question5a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
-        youWin();
+        secondsLeft = secondsLeft - 10;
+        if (secondsLeft < 1) {
+            gameOver(); 
+        } else { 
+            youWin();
+            stopTimer();
+          };
+        
     
+        
     });
     var clickedAnswerB = document.querySelector(".question5b");
         clickedAnswerB = clickedAnswerB.addEventListener("click", function() {
         youWin();
-
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerC = document.querySelector(".question5c");
         clickedAnswerC = clickedAnswerC.addEventListener("click", function() {
         youWin();
-
+        secondsLeft = secondsLeft - 10;
     });
     var clickedAnswerD = document.querySelector(".question5d");
         clickedAnswerD = clickedAnswerD.addEventListener("click", function() {
         youWin();
         gameScore = gameScore + 450;
         score.textContent = gameScore;
+        enterScore();
     });
     
 }
@@ -433,6 +455,7 @@ function question5() {
 function youWin() {
 
     quizPage.textContent = "";
+   
     var youWin = document.createElement("img");
         youWin.setAttribute("class", "col-sm-10 mx-auto youWin");
         youWin.setAttribute("id", "youWin");
@@ -440,9 +463,21 @@ function youWin() {
         youWin.setAttribute("alt", "Bravo, You WIN!");
         youWin.setAttribute("style", "height: 500px; width: auto;")
         quizPage.appendChild(youWin);
+    };
 
-    stopTimer();
+stopTimer();
+
+function enterScore() {
+    // var finalScore = document.querySelector("#finalScore");
+    var createScore = document.createElement("div");
+        createScore.setAttribute("class", "col-sm-10 mx-auto");
+        createScore.setAttribute("id", "createScore");
+        finalScore.appendChild(createScore);
+        createScore.textContent = "Your final score is: " + score.textContent;
 
 }
+
+
+
 
 
