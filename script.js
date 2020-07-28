@@ -15,7 +15,6 @@ var gameScore = 0;
 var finalScore = document.querySelector("#finalScore");
 
 
-
 // Creates function to click and start countdown and quiz
 var startQuiz = document.querySelector("#startQuiz");
     startQuiz = startQuiz.addEventListener("click", function() {
@@ -48,27 +47,33 @@ function timerCountdown() {
 }
 
 
+// Creates the first question
 function question1() {
 
+    // Erases quizPage and finalScore to avoid overlapping
     quizPage.textContent = "";
     finalScore.textContent = "";
 
+    // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
     var row1 = document.createElement("div");
         row1.setAttribute("class", "col-sm-10 mx-auto");
         row1.setAttribute("id", "row1");
         quizPage.appendChild(row1);
 
+    // Creates <h1> element and displays first question's HTML elemnents
     var question1 = document.createElement("h1");
         question1.textContent = "What does the acronym HTML stands for? ";
         question1.setAttribute("style", "display-5");
         row1.appendChild(question1);
 
+    // Creates <button> element, establishes possible answer with class and ID, and it appends to ID element #row1
     var question1Answer1 = document.createElement("button");
         question1Answer1.textContent = "a) Hypertext Markup Link";
         question1Answer1.setAttribute("class", "question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question1Answer1.setAttribute("id", "question1Answer1");
         row1.appendChild(question1Answer1);
 
+    // Creates <br> element and appends it to ID element #row1
     var br1 = document.createElement("br");
         row1.appendChild(br1);
 
@@ -76,9 +81,7 @@ function question1() {
         question1Answer2.textContent = "b) Hypertext Markup Language";
         question1Answer2.setAttribute("class", "question1b answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question1Answer2.setAttribute("id", "question1Answer2");
-        row1.appendChild(question1Answer2);
-        
-
+        row1.appendChild(question1Answer2);     
 
     var br2 = document.createElement("br");
         row1.appendChild(br2);
@@ -97,8 +100,16 @@ function question1() {
         question1Answer4.setAttribute("class", "question1d answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left");
         question1Answer4.setAttribute("id", "question1Answer4");
         row1.appendChild(question1Answer4);
-        
 
+
+    //      ***********************************
+    //      * SECTION WITH ANSWERS VALIDATION *
+    //      ***********************************
+    //      If answer a) is clicked, then: 
+    //          1) the next question will show up
+    //          2) if the answer of the button created is wrong, then the amount of time left (recorded inside variable secondsLeft) 
+    //              will be decreased by 10 seconds
+    //          3) else, the game score will be increased by the assigned answer value, by difficulty. 
     var clickedAnswerA = document.querySelector(".question1a");
         clickedAnswerA = clickedAnswerA.addEventListener("click", function() {    
         question2();
@@ -129,6 +140,7 @@ function question1() {
 // Question #2 following the same parameters and guidelines as in Question #1 
 function question2() {
 
+    // Erases quizPage and finalScore to avoid overlapping
     quizPage.textContent = "";
     finalScore.textContent = "";
 
@@ -203,6 +215,7 @@ function question2() {
 // Question #3 
 function question3() {
 
+    // Erases quizPage and finalScore to avoid overlapping
     quizPage.textContent = "";
     finalScore.textContent = "";
 
@@ -278,6 +291,7 @@ function question3() {
 // Question #4
 function question4() {
 
+    // Erases quizPage and finalScore to avoid overlapping
     quizPage.textContent = "";
     finalScore.textContent = "";
 
@@ -352,6 +366,7 @@ function question4() {
 // Question #5
 function question5() {
 
+    // Erases quizPage and finalScore to avoid overlapping
     quizPage.textContent = "";
     finalScore.textContent = "";
 
