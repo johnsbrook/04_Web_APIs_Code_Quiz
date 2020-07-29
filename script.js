@@ -16,14 +16,9 @@ var finalScore = document.querySelector("#finalScore");
 
 
 // Creates function to click and start countdown and quiz
-var startQuiz = document.querySelector("#startQuiz");
-    startQuiz = startQuiz.addEventListener("click", function() {
-
-        timerCountdown();
-        question1();
-
-    });
-
+$("#startQuiz").on("click",function() {
+    timerCountdown(); 
+    question1();                    });
 
 // Sets countdown from 60 to 0 seconds and sends to gameOver() function
 var secondsLeft = 30;
