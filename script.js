@@ -1,55 +1,30 @@
-var quizPage = document.querySelector("#quizPage");
-var welcome = document.querySelector("#welcome");
-var codeQuiz = document.querySelector("#codeQuiz");
-var intro = document.querySelector("#intro");
-var introParagraph = document.querySelector("#introParagraph");
-var goodLuck = document.querySelector("#goodLuck");
-var countdown = document.querySelector("#countdown");
-var score = document.querySelector('#score');
-
-// Sets initial value for user's game score. 
 var gameScore = 0;
-    score.textContent = gameScore;
+    $("#score").text(gameScore);
+var secondsLeft = 30;
+var timerCountdown;    
 
-// Sets initial variable for the user to record score. 
-var finalScore = document.querySelector("#finalScore");
-
-
-// Creates function to click and start countdown and quiz
 $("#startQuiz").on("click",function() {
     timerCountdown(); 
     question1();                    });
 
-// Sets countdown from 60 to 0 seconds and sends to gameOver() function
-var secondsLeft = 30;
-var timerCountdown;
+function    timerCountdown() { 
+    
+            timerCountdown = setInterval(function() {
+            secondsLeft--;
+            $("#countdown").text(secondsLeft);       
+            if(secondsLeft < 1) {
+                clearInterval(timerCountdown);
+                $("#countdown").text("0");
+                    gameOver();
+                    enterScore();
+                    stopTimer();
+            }}, 1000);}
 
-function timerCountdown() {
-
-        // secondsLeft = 30;    
-        timerCountdown = setInterval(function() {
-        secondsLeft--;
-        countdown.textContent = secondsLeft;
-
-        if(secondsLeft < 1) {
-            clearInterval(timerCountdown);
-            countdown.textContent = 0;
-            gameOver();
-            enterScore();
-            stopTimer();
-        }
-    }, 1000);
-}
-
-// Creates the first question
 function question1() {
-
-    // Erases quizPage and finalScore to avoid overlapping
-    quizPage.textContent = "";
-    finalScore.textContent = "";
-
-    // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
+     $("#quizPage").text("");
+    $("#finalScore").text("");    
     $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+
     $("#row1").append('<h1>What does the acronym HTML stands for?</h1>');
     $('#row1').append('<button id="question1Answer1" class="wrongAnswer question1a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> a) Hypertext Markup Link</button>');
     $('#row1').append('<br>');
@@ -63,28 +38,20 @@ function question1() {
         $('.wrongAnswer').click(function(){
             secondsLeft -=10;
             question2();
-        })
-    }
+        })}
 
     if ($('.correctAnswer')) {
         $('.correctAnswer').click(function(){
             gameScore += 300;
-            score.textContent = gameScore;
+            $("#score").text(gameScore);
             question2();
-        })
-    }
-   
-}
+        })  }}
 
-// Creates the second question
 function question2() {
-
-    // Erases quizPage and finalScore to avoid overlapping
-    quizPage.textContent = "";
-    finalScore.textContent = "";
-
-    // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
+    $("#quizPage").text("");
+    $("#finalScore").text("");
     $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+
     $("#row1").append('<h1>What\'s a CDN?</h1>');
     $('#row1').append('<button id="question2Answer1" class="wrongAnswer question2a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> a) Content Display Network</button>');
     $('#row1').append('<br>');
@@ -98,28 +65,20 @@ function question2() {
         $('.wrongAnswer').click(function(){
             secondsLeft -=10;
             question3();
-        })
-    }
+        })}
 
     if ($('.correctAnswer')) {
         $('.correctAnswer').click(function(){
             gameScore += 600;
-            score.textContent = gameScore;
+            $("#score").text(gameScore);
             question3();
-        })
-    }
-   
-}
+        })  }}
 
-// Creates the third question
 function question3() {
-
-    // Erases quizPage and finalScore to avoid overlapping
-    quizPage.textContent = "";
-    finalScore.textContent = "";
-
-    // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
+    $("#quizPage").text("");
+    $("#finalScore").text("");
     $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+
     $("#row1").append('<h1>What do you use to link a stylesheet?</h1>');
     $('#row1').append('<button id="question3Answer1" class="wrongAnswer question3a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> a) link type="" href=""</button>');
     $('#row1').append('<br>');
@@ -133,28 +92,20 @@ function question3() {
         $('.wrongAnswer').click(function(){
             secondsLeft -=10;
             question4();
-        })
-    }
+        })}
 
     if ($('.correctAnswer')) {
         $('.correctAnswer').click(function(){
             gameScore += 450;
-            score.textContent = gameScore;
+            $("#score").text(gameScore);
             question4();
-        })
-    }
-   
-}
+        })  }}
 
-// Creates the fourth question
 function question4() {
-
-    // Erases quizPage and finalScore to avoid overlapping
-    quizPage.textContent = "";
-    finalScore.textContent = "";
-
-    // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
+    $("#quizPage").text("");
+    $("#finalScore").text("");
     $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+
     $("#row1").append('<h1>What is the symbol to define class?</h1>');
     $('#row1').append('<button id="question4Answer1" class="wrongAnswer question4a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> a) # (pound or number sign)</button>');
     $('#row1').append('<br>');
@@ -168,28 +119,20 @@ function question4() {
         $('.wrongAnswer').click(function(){
             secondsLeft -=10;
             question5();
-        })
-    }
+        })}
 
     if ($('.correctAnswer')) {
         $('.correctAnswer').click(function(){
             gameScore += 450;
-            score.textContent = gameScore;
+            $("#score").text(gameScore);
             question5();
-        })
-    }
-   
-}
+        })  }}
 
-// Creates the fifth question
 function question5() {
-
-    // Erases quizPage and finalScore to avoid overlapping
-    quizPage.textContent = "";
-    finalScore.textContent = "";
-
-    // Creates div element titled "row 1", establishes class and ID, and appends it to ID element #quizPage
+    $("#quizPage").text("");
+    $("#finalScore").text("");
     $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+
     $("#row1").append('<h1>Which type of file you need to create to customize a page\'s style?</h1>');
     $('#row1').append('<button id="question5Answer1" class="wrongAnswer question5a answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"> a) Class Style Sheet (.css)</button>');
     $('#row1').append('<br>');
@@ -210,74 +153,76 @@ function question5() {
                 youWin();
                 enterScore();
                 stopTimer();
-              };  
-        })
-    }
-
+            };      })      }
     if ($('.correctAnswer')) {
         $('.correctAnswer').click(function(){
             gameScore += 450;
-            score.textContent = gameScore;
+            $("#score").text(gameScore);
+            youWin();
             enterScore();
             stopTimer();   
-        })
-    }   
-}
+        })      }}
 
-// Creates the youWin() function
 function youWin() {
+    $('#quizPage').text("");
+    $('#quizPage').append('<img src="youwin.gif" alt="Bravo, You WIN!" id="youWin" class="col-sm-10 mx-auto youWin" style="height: 500px; width: auto;">');}
 
-    quizPage.textContent = "";
-   
-    var youWin = document.createElement("img");
-        youWin.setAttribute("class", "col-sm-10 mx-auto youWin");
-        youWin.setAttribute("id", "youWin");
-        youWin.setAttribute("src", "youwin.gif");
-        youWin.setAttribute("alt", "Bravo, You WIN!");
-        youWin.setAttribute("style", "height: 500px; width: auto;")
-        quizPage.appendChild(youWin);
-    };
-
-// Displays Game Over when user doesn't successfully answer questions
 function gameOver() {
-
-    quizPage.textContent = "";
-    var gameOver = document.createElement("img");
-        gameOver.setAttribute("class", "col-sm-10 mx-auto gameOver");
-        gameOver.setAttribute("id", "gameOver");
-        gameOver.setAttribute("src", "game-over.gif");
-        gameOver.setAttribute("alt", "Game Over");
-        gameOver.setAttribute("style", "height: 500px; width: auto;")
-        quizPage.appendChild(gameOver);
-  
-}
-
-// stopTimer();
+    $('#quizPage').text("");
+    $('#quizPage').append('<img src="game-over.gif" alt="Game Over" id="gameOver" class="col-sm-10 mx-auto gameOver" style= "height: 500px; width: auto;">');}
 
 function enterScore() {
-    // var finalScore = document.querySelector("#finalScore");
-    
-    var createScore = document.createElement("div");
-        createScore.setAttribute("class", "col-sm-10 mx-auto");
-        createScore.setAttribute("id", "createScore");        
-        createScore.textContent = "Your final score is: " + score.textContent;
-        finalScore.appendChild(createScore);
-        console.log(createScore);
-  
+    $('#quizPage').append('<div id="createScore" class="col-sm-10 mx-auto my-5 style="font-weight: ">' + "Your final score is: " + $("#score").text());
     promptScore();
 }
 
-// Stops Timer if user finishes game
 function stopTimer() {
-    countdown.textContent = "CODING RULES!";
-    countdown.setAttribute("style", "color: red; font-weight: bold;");
+    $('#countdown').text('CODING RULES!');
+    $('#countdown').attr('style', 'color: red; font-weight: bold;"');
     clearInterval(timerCountdown); 
 }
 
 
+var scorePlayerArray = [[],[]];
+var promptPlayer = "";
+var storedScore = "";
+
 function promptScore() {
-    var promptScore = prompt("Enter your name: ")
-        storedScore = promptScore + ", your score is " + score.textContent +  "!";
-        localStorage.setItem("storedScored", JSON.stringify(storedScore));
-        console.log(storedScore);
+
+        promptPlayer = prompt("Enter your name: ");
+        alert(promptPlayer + ", your score is " + $("#score").text() +  "!");
+        storedScore = $("#score").text();
+
+        var addPlayer = function(num) {
+            scorePlayerArray[0].push(num);
+        };
+        var addScore = function(num) {
+            scorePlayerArray[1].push(num);
+        }
+        addPlayer(promptPlayer);
+        addScore(storedScore);
+
+    console.log(scorePlayerArray);
+var scorePlayerStr = JSON.stringify(scorePlayerArray);
+localStorage.setItem("Player", scorePlayerStr);
+var getArray = localStorage.getItem("Player");
+    console.log(getArray);
+
+    addUserScore();
+}
+
+var playerName = [{ playerName: "Bob" }];    
+function addUserScore(event) {
+    
+    var innerHTMLuserScore = promptPlayer + " " + $("#score").text();
+        console.log($("#score").text());
+        console.log(innerHTMLuserScore);
+        
+    var li = document.createElement("li");
+        li.id = playerName.length;
+        li.innerHTML = innerHTMLuserScore;
+
+    console.log(li.innerHTML);
+    playerName.push({playerName: innerHTMLuserScore});
+    $("#playerList").append(li);
 }

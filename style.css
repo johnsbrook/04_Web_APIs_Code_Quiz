@@ -6,6 +6,10 @@ button {
     border-radius: 5px;
 }
 
+.StartQuiz {
+    margin-top: 25px;
+}
+
 .codeQuiz {
     font-size: 48px; 
     font-weight: 600;
