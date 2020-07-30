@@ -215,7 +215,7 @@ function gameOver() {
 
 function enterScore() {
   $("#quizPage").append(
-    '<div id="createScore" class="col-sm-10 mx-auto my-5">' +
+    '<div id="createScore" class="col-sm-10 mx-auto my-2">' +
       "YOUR HIGH SCORE IS: " +
       $("#score").text()
   );
