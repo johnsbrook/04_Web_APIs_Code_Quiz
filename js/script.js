@@ -203,13 +203,13 @@ function reloadShow() {
 function youWin() {  
   $("#quizPage").text("");
   $("#quizPage").append(
-    '<div><img src="images/youwin.gif" alt="Bravo, You WIN!" id="youWin" class="col-sm-10 mx-auto youWin" style="height: 200px; width: auto;"></div>');
+    '<div><img src="images/youwin.gif" alt="Bravo, You WIN!" id="youWin" class="col-sm-10 mx-auto youWin" style="max-width: 500px; height: auto;"></div>');
 }
 
 function gameOver() {
   $("#quizPage").text("");
   $("#quizPage").append(
-    '<div><img src="images/game-over.gif" alt="Game Over" id="gameOver" class="col-sm-10 mx-auto gameOver" style= "height: 200px; width: auto;"></div>'
+    '<div><img src="images/game-over.gif" alt="Game Over" id="gameOver" class="col-sm-10 mx-auto gameOver" style= "max-width: 500px; height: auto;"></div>'
   );
 }
 
