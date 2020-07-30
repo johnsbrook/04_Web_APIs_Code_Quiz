@@ -223,8 +223,8 @@ function gameOver() {
 
 function enterScore() {
   $("#quizPage").append(
-    '<div id="createScore" class="col-sm-10 mx-auto my-5 style="font-weight: ">' +
-      "Your final score is: " +
+    '<div id="createScore" class="col-sm-10 mx-auto my-5">' +
+      "YOUR HIGH SCORE IS: " +
       $("#score").text()
   );
   promptScore();
@@ -232,7 +232,7 @@ function enterScore() {
 
 function stopTimer() {
   $("#countdown").text("CODING RULES!");
-  $("#countdown").attr("style", 'color: red; font-weight: bold;"');
+  $("#countdown").attr("style", 'color: black; font-weight: bold;"');
   clearInterval(timerCountdown);
 }
 
@@ -275,7 +275,8 @@ function addUserScore(event) {
 
   console.log(li.innerHTML);
   playerName.push({ playerName: innerHTMLuserScore });
-  $("#playerList").append(li);
+  $("#quizPage").append(li);
+  console.log(li)
 }
 
 $("#reload").on("click", function () {

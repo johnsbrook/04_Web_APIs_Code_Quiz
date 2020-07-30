@@ -22,9 +22,6 @@ footer {
     font-size: 1.3em;
 }
 
-.StartQuiz {
-    margin-top: 25px;
-}
 
 .codeQuiz {
     color: purple;
@@ -35,9 +32,30 @@ footer {
 }
 
 .travelImage {
-    width: 25%;
-    height: 25%;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 2px 2px lightgrey;
+}
+
+.intro {
+    font-family: 'Open Sans', sans-serif; 
+    font-size: small;
+}
+
+.introUL {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: small;
+}
+
+.goodLuck {
+        color: goldenrod;
+        font-family: 'Open Sans', sans-serif; 
+        font-size: 1.5em; 
+        font-weight: 600;
+        text-shadow: 1px 1px 2px lightgrey;
+
 }
 
 .answer{
