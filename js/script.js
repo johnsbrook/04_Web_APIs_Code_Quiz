@@ -5,35 +5,35 @@ var timerCountdown;
 
 var allAnswers = {
   question1: [
-    '<span class="wrong">' + "a) Kensington, United Kingdom" + "</span>",
-    '<span id="correct">' + "b) London, United Kingdom" + "</span>",
-    '<span class="wrong">' + "c) London, Canada" + "</span>",
-    "<span class='wrong'>" + "d) Windsor, United Kingdom" + "</span>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "a) Kensington, United Kingdom" + "</button>" + "<br>",
+    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "b) London, United Kingdom" + "</button>" + "<br>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "c) London, Canada" + "</button>" + "<br>",
+    "<button class='wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left'>" + "d) Windsor, United Kingdom" + "</button>" + "<br>"
   ],
   question2: [
-    '<span class="wrong">' + "a) Delhi, India" + "</span>",
-    '<span class="wrong">' + "b) Agra, India" + "</span>",
-    '<span class="wrong">' + "c) Jaipur, India" + "</span>",
-    '<span id="correct">' + "d) Mumbai, India" + "</span>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "a) Delhi, India" + "</button>" + "<br>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "b) Agra, India" + "</button>" + "<br>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "c) Jaipur, India" + "</button>" + "<br>",
+    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "d) Mumbai, India" + "</button>" + "<br>"
   ],
   question3: [
-    '<span class="wrong">' + 'a) A beach resort in Indonesia' + "</span>",
-    '<span class="wrong">' + 'b) A ruin in Cambodia' + "</span>",
-    '<span id="correct">' + 'c) An ancient city in Pakistan' + "</span>",
-    '<span class="wrong">' + 'd) A tribe in Africa' + "</span>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + 'a) A beach resort in Indonesia' + "</button>" + "<br>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + 'b) A ruin in Cambodia' + "</button>" + "<br>",
+    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + 'c) An ancient city in Pakistan' + "</button>" + "<br>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + 'd) A tribe in Africa' + "</button>" + "<br>"
   ],
 
   question4: [
-    '<span class="wrong">' + "a) Buenos Aires" + "</span>",
-    '<span id="correct">' + "b) Lima" + "</span>",
-    '<span class="wrong">' + "c) Bogota" + "</span>",
-    '<span class="wrong">' + "d) Rio de Janeiro" + "</span>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "a) Buenos Aires" + "</button>" + "<br>",
+    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "b) Lima" + "</button>" + "<br>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "c) Bogota" + "</button>" + "<br>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "d) Rio de Janeiro" + "</button>" + "<br>"
   ],
   question5: [
-    '<span class="wrong">' + "a) Madrid, Spain" + "</span>",
-    '<span class="wrong">' + "b) Mexico City, Mexico" + "</span>",
-    '<span class="wrong">' + "c) Lisbon, Portugal" + "</span>",
-    '<span id="correct">' + "d) Barcelona, Spain" + "</span>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "a) Madrid, Spain" + "</button>" + "<br>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "b) Mexico City, Mexico" + "</button>" + "<br>",
+    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "c) Lisbon, Portugal" + "</button>" + "<br>",
+    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "d) Barcelona, Spain" + "</button>" + "<br>"
   ],
 
   images1: [
@@ -41,8 +41,8 @@ var allAnswers = {
     '<div><img src="images/taj-hotel.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
     '<div><img src="images/mohenjo-daro.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
     '<div><img src="images/lima.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
-    '<div><img src="images/sagrada-familia.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
-  ],
+    '<div><img src="images/sagrada-familia.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>'
+  ]
 };
 
 
@@ -72,10 +72,7 @@ function question1() {
   $("#row1").append("<h1>In which city is Kensington Palace?</h1>");
   $('#row1').append(allAnswers.images1[0]);
   for (var i = 0; i < allAnswers.question1.length; i++) {
-    $("#row1").append(
-      '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question1[i] + "</button>" + "<br>"
-    );
+    $("#row1").append(allAnswers.question1[i]);
   }
 
   
@@ -100,8 +97,7 @@ function question2() {
 
   for (var i = 0; i < allAnswers.question2.length; i++) {
     $("#row1").append(
-      '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question2[i] + "</button>" + "<br>"
+      '<span>' + allAnswers.question2[i] + "</span>" + "<br>"
     );
   }
 
@@ -125,10 +121,7 @@ function question3() {
   $('#row1').append(allAnswers.images1[2]);
 
   for (var i = 0; i < allAnswers.question3.length; i++) {
-    $("#row1").append(
-      '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question3[i] + "</button>" + "<br>"
-    );
+    $("#row1").append(allAnswers.question3[i]);
   }
 
   $(".wrong").click(function () {
@@ -151,10 +144,7 @@ function question4() {
   $('#row1').append(allAnswers.images1[3]);
 
   for (var i = 0; i < allAnswers.question4.length; i++) {
-    $("#row1").append(
-      '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question4[i] + "</button>" + "<br>"
-    );
+    $("#row1").append(allAnswers.question4[i]);
   }
 
   $(".wrong").click(function () {
@@ -177,10 +167,7 @@ function question5() {
   $('#row1').append(allAnswers.images1[4]);
 
   for (var i = 0; i < allAnswers.question5.length; i++) {
-    $("#row1").append(
-      '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question5[i] + "</button>" + "<br>"
-    );
+    $("#row1").append(allAnswers.question5[i]);
   }
 
   $(".wrong").click(function () {
