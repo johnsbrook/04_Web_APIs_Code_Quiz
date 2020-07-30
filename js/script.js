@@ -12,9 +12,9 @@ var allAnswers = {
   ],
   question2: [
     '<span class="wrong">' + "a) Delhi, India" + "</span>",
-    '<span class="wrong">' + "b) Mumbai, India" + "</span>",
+    '<span class="wrong">' + "b) Agra, India" + "</span>",
     '<span class="wrong">' + "c) Jaipur, India" + "</span>",
-    '<span id="correct">' + "d) Agra, India" + "</span>",
+    '<span id="correct">' + "d) Mumbai, India" + "</span>",
   ],
   question3: [
     '<span class="wrong">' + 'a) A beach resort in Indonesia' + "</span>",
@@ -34,6 +34,14 @@ var allAnswers = {
     '<span class="wrong">' + "b) Mexico City, Mexico" + "</span>",
     '<span class="wrong">' + "c) Lisbon, Portugal" + "</span>",
     '<span id="correct">' + "d) Barcelona, Spain" + "</span>",
+  ],
+
+  images1: [
+    '<div><img src="images/kensington.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
+    '<div><img src="images/taj-hotel.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
+    '<div><img src="images/mohenjo-daro.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
+    '<div><img src="images/lima.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
+    '<div><img src="images/sagrada-familia.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
   ],
 };
 
@@ -64,7 +72,7 @@ function question1() {
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
   $("#row1").append("<h1>In which city is Kensington Palace?</h1>");
-
+  $('#row1').append(allAnswers.images1[0]);
   for (var i = 0; i < allAnswers.question1.length; i++) {
     $("#row1").append(
       '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
@@ -72,7 +80,9 @@ function question1() {
     );
   }
 
-  $("#wrong").click(function () {
+  
+
+  $(".wrong").click(function () {
     secondsLeft -= 10;
     question2();
   });
@@ -87,7 +97,8 @@ function question2() {
   $("#quizPage").text("");
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
-  $("#row1").append("<h1>In what country is the Taj Mahal?</h1>");
+  $("#row1").append("<h1>In what country is the Taj Mahal Hotel?</h1>");
+  $('#row1').append(allAnswers.images1[1]);
 
   for (var i = 0; i < allAnswers.question2.length; i++) {
     $("#row1").append(
@@ -113,6 +124,7 @@ function question3() {
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
   $("#row1").append("<h1>What is Mohenjo Daro?</h1>");
+  $('#row1').append(allAnswers.images1[2]);
 
   for (var i = 0; i < allAnswers.question3.length; i++) {
     $("#row1").append(
@@ -138,6 +150,7 @@ function question4() {
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
   $("#row1").append("<h1>Which city is known as the culinary capital of South America?</h1>");
+  $('#row1').append(allAnswers.images1[3]);
 
   for (var i = 0; i < allAnswers.question4.length; i++) {
     $("#row1").append(
@@ -163,6 +176,7 @@ function question5() {
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
   $("#row1").append("<h1>Where is Sagrada Familia cathedral?</h1>");
+  $('#row1').append(allAnswers.images1[4]);
 
   for (var i = 0; i < allAnswers.question5.length; i++) {
     $("#row1").append(
@@ -203,13 +217,13 @@ function reloadShow() {
 function youWin() {  
   $("#quizPage").text("");
   $("#quizPage").append(
-    '<div><img src="images/youwin.gif" alt="Bravo, You WIN!" id="youWin" class="col-sm-10 mx-auto youWin" style="max-width: 500px; height: auto;"></div>');
+    '<div><img src="images/youwin.jpg" alt="Bravo, You WIN!" id="youWin" class="col-sm-10 mx-auto youWin" style="max-width: 350px; height: auto; border-radius: 25px;"></div>');
 }
 
 function gameOver() {
   $("#quizPage").text("");
   $("#quizPage").append(
-    '<div><img src="images/game-over.gif" alt="Game Over" id="gameOver" class="col-sm-10 mx-auto gameOver" style= "max-width: 500px; height: auto;"></div>'
+    '<div><img src="images/game-over.jpg" alt="Game Over" id="gameOver" class="col-sm-10 mx-auto gameOver" style= "max-width: 350px; height: auto; border-radius: 25px;"></div>'
   );
 }
 
