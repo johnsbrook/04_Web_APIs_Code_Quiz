@@ -31,4 +31,4 @@ To begin playing, follow these steps:
 
 BEST OF LUCK!
 
-![Getting Started](images/game-shot.jpg)
+![Getting Started](images/game-shot.png)
