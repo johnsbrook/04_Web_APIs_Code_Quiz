@@ -11,10 +11,6 @@ footer {
     background-color: coral;
 }
 
-ul {
-    list-style: none;
-}
-
 .headerItems {
     font-family: 'Open Sans', sans-serif; 
     font-size: 1em;
@@ -44,13 +40,13 @@ ul {
 
 .intro {
     font-family: 'Open Sans', sans-serif; 
-    font-size: small;
+    font-size: larger;
 }
 
 .introUL {
     list-style: none;
     font-family: 'Open Sans', sans-serif; 
-    font-size: small;
+    font-size: large;
 }
 
 .goodLuck {
