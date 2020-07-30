@@ -45,8 +45,6 @@ var allAnswers = {
   ],
 };
 
-$("#reload").hide();
-$("#playerList").hide();
 
 $("#startQuiz").on("click", function () {
   timerCountdown();
@@ -209,10 +207,6 @@ function question5() {
   });
 }
 
-function reloadShow() {
-  $("#reload").show();
-  $("#playerList").show();
-}
 
 function youWin() {  
   $("#quizPage").text("");
@@ -228,11 +222,14 @@ function gameOver() {
 }
 
 function enterScore() {
-  $("#quizPage").append(
-    '<div id="createScore" class="col-sm-10 mx-auto my-2">' +
-      "YOUR HIGH SCORE IS: " +
-      $("#score").text()
+  $("#quizPage").append('<div id="createScore" class="col-sm-10 mx-auto my-2">' + "YOUR HIGH SCORE IS: " + $("#score").text()
   );
+  $("#quizPage").append('<button id="reloadGame" class="StartQuiz col-10 col-md-3 mx-auto my-3 bg-primary text-white">' + "Restart Game" + '</button>');
+  $("#reloadGame").on("click", function() {
+    location.reload();
+  })
+
+
   promptScore();
 }
 
@@ -285,6 +282,4 @@ function addUserScore(event) {
   console.log(li)
 }
 
-$("#reload").on("click", function () {
-  location.reload();
-});
+
