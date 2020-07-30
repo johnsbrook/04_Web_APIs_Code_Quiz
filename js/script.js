@@ -181,6 +181,7 @@ function question5() {
       youWin();
       enterScore();
       stopTimer();
+      reloadShow()
     }
   });
 
@@ -190,24 +191,25 @@ function question5() {
     youWin();
     enterScore();
     stopTimer();
+    reloadShow()
   });
 }
 
-function youWin() {
+function reloadShow() {
   $("#reload").show();
   $("#playerList").show();
+}
+
+function youWin() {  
   $("#quizPage").text("");
   $("#quizPage").append(
-    '<img src="images/youwin.gif" alt="Bravo, You WIN!" id="youWin" class="col-sm-10 mx-auto youWin" style="height: 200px; width: auto;">'
-  );
+    '<div><img src="images/youwin.gif" alt="Bravo, You WIN!" id="youWin" class="col-sm-10 mx-auto youWin" style="height: 200px; width: auto;"></div>');
 }
 
 function gameOver() {
-  $("#reload").show();
-  $("#playerList").show();
   $("#quizPage").text("");
   $("#quizPage").append(
-    '<img src="images/game-over.gif" alt="Game Over" id="gameOver" class="col-sm-10 mx-auto gameOver" style= "height: 200px; width: auto;">'
+    '<div><img src="images/game-over.gif" alt="Game Over" id="gameOver" class="col-sm-10 mx-auto gameOver" style= "height: 200px; width: auto;"></div>'
   );
 }
 
