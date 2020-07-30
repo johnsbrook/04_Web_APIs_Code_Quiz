@@ -15,8 +15,16 @@
 
 <!-- Link to CSS  -->
 <link rel="stylesheet" href="style.css">
+
+<!-- Link to Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+<!-- Use this CCS rule for fonts
+    font-family: 'Open Sans', sans-serif; 
+-->
+
+<!-- Link to jquery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
 
 
 <title>Web API: Code Quiz</title>
@@ -31,17 +39,19 @@
 
 <header class="header navbar shadow-sm" id="header">
 
-<h9 class="mr-auto ml-3 ml-sm-5 text-center" id="yourScore">Your Score: <span class="" id="score"></span></h9>
+<h9 class="headerItems mr-auto ml-3 ml-sm-5 text-center" id="yourScore">Your Score: <span id="score"></span></h9>
 
-<h5 class="ml-auto mr-3 mr-sm-5 text-center" id="timer">Timer<br><span class="" id="countdown">30</span></h5>
+<h5 class="ml-auto mr-3 mr-sm-5 text-center headerItems" id="timer">Timer<br><span id="countdown">30</span></h5>
 </header>
 
 <div class="container col-sm-8 text-center pt-5 mx-auto bg-light shadow" style="height: 100%;">
 
     <div class="row" id="quizPage">
 
-        <h4 class="welcome" id="welcome">Welcome to</h4>
-        <h1 class="codeQuiz mb-5 text-info display-3" id="codeQuiz">CODE QUIZ</h1>
+        <h4 class="welcome" id="welcome">Test Your Knowledge On</h4>
+        <h1 class="codeQuiz mb-3 display-3" id="codeQuiz">Travel Destinations</h1>
+        
+        <img src="images/lisbon.jpg" class="travelImage mx-auto mb-2">
 
         <p class="intro" id="intro">You have 30 seconds to successfully answer all questions.<br>Everytime the answer is wrong, the timer will be reduced by 10 seconds.<br>If you answer the last question wrong with less than 10 seconds left, you<br>WILL LOSE!</p>
         <p class="intro" id="introParagraph">Press on Start Button to begin taking the quiz.</p>
@@ -51,17 +61,23 @@
         <button class="StartQuiz col-10 col-md-3 mx-auto mb-5 bg-primary text-white" id="startQuiz">Start</button>
 
     </div>
+
     <div class="row" id="finalScore"></div>
     <div class="row col-10 mx-auto text-center" id="userFinalScore"></div>
     <div class="row col-10 mx-auto text-center">
-    <ul id="playerList" style="list-style-type: none;">
-        <li id="0">Players Scores</li>
-    </ul></div>
-</div>
+
+        <button id="reload" class="StartQuiz col-10 col-md-3 mx-auto mb-5 bg-primary text-white">Restart Game</button>
+
+        <ul id="playerList" style="list-style-type: none;">
+            <li id="0">Players Scores</li>
+        </ul>
+
+    </div>
 
 </div>
+</div>
 
-<footer class="footer fixed-bottom bg-info text-white text-center p-1 shadow-sm" id="footer">&copy; Copyright</footer>
+<footer class="footer fixed-bottom text-white text-center p-1 shadow-sm" id="footer">&copy; Copyright</footer>
 
 <!-- Link to Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
