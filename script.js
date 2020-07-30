@@ -5,35 +5,35 @@ var timerCountdown;
 
 var allAnswers = {
   question1: [
-    '<span class="wrong">' + "a) Hyertext Markup Link" + "</span>",
-    '<span id="correct">' + "b) Hypertext Markup Language" + "</span>",
-    '<span class="wrong">' + "c) Hypermarkup Language" + "</span>",
-    "<span class='wrong'>" + "d) Hypermarkup Text Language" + "</span>",
+    '<span class="wrong">' + "a) Kensington, United Kingdom" + "</span>",
+    '<span id="correct">' + "b) London, United Kingdom" + "</span>",
+    '<span class="wrong">' + "c) London, Canada" + "</span>",
+    "<span class='wrong'>" + "d) Windsor, United Kingdom" + "</span>",
   ],
   question2: [
-    '<span class="wrong">' + "a) Content Display Network" + "</span>",
-    '<span class="wrong">' + "b) Content Discretionary Network" + "</span>",
-    '<span class="wrong">' + "c) Content Depository Network" + "</span>",
-    '<span id="correct">' + "d) Content Delivery Network" + "</span>",
+    '<span class="wrong">' + "a) Delhi, India" + "</span>",
+    '<span class="wrong">' + "b) Mumbai, India" + "</span>",
+    '<span class="wrong">' + "c) Jaipur, India" + "</span>",
+    '<span id="correct">' + "d) Agra, India" + "</span>",
   ],
   question3: [
-    '<span class="wrong">' + 'a) link type="" href=""' + "</span>",
-    '<span class="wrong">' + 'b) link rel="" src=""' + "</span>",
-    '<span id="correct">' + 'c) link rel="" href=""' + "</span>",
-    '<span class="wrong">' + 'd) link type="" src=""' + "</span>",
+    '<span class="wrong">' + 'a) A beach resort in Indonesia' + "</span>",
+    '<span class="wrong">' + 'b) A ruin in Cambodia' + "</span>",
+    '<span id="correct">' + 'c) An ancient city in Pakistan' + "</span>",
+    '<span class="wrong">' + 'd) A tribe in Africa' + "</span>",
   ],
 
   question4: [
-    '<span class="wrong">' + "a) # (pound or number sign)" + "</span>",
-    '<span id="correct">' + "b) . (period)" + "</span>",
-    '<span class="wrong">' + "c) { } (curly brackets)" + "</span>",
-    '<span class="wrong">' + "d) [ ] (brackets)" + "</span>",
+    '<span class="wrong">' + "a) Buenos Aires" + "</span>",
+    '<span id="correct">' + "b) Lima" + "</span>",
+    '<span class="wrong">' + "c) Bogota" + "</span>",
+    '<span class="wrong">' + "d) Rio de Janeiro" + "</span>",
   ],
   question5: [
-    '<span class="wrong">' + "a) Class Style Sheet (.css)" + "</span>",
-    '<span class="wrong">' + "b) Cascading Style File (.css)" + "</span>",
-    '<span class="wrong">' + "c) Classifying Stylesheet (.css)" + "</span>",
-    '<span id="correct">' + "d) Cascading Style Sheets (.css)" + "</span>",
+    '<span class="wrong">' + "a) Madrid, Spain" + "</span>",
+    '<span class="wrong">' + "b) Mexico City, Mexico" + "</span>",
+    '<span class="wrong">' + "c) Lisbon, Portugal" + "</span>",
+    '<span id="correct">' + "d) Barcelona, Spain" + "</span>",
   ],
 };
 
@@ -63,14 +63,12 @@ function question1() {
   $("#quizPage").text("");
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
-  $("#row1").append("<h1>What does the acronym HTML stands for?</h1>");
+  $("#row1").append("<h1>In which city is Kensington Palace?</h1>");
 
   for (var i = 0; i < allAnswers.question1.length; i++) {
     $("#row1").append(
       '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question1[i] +
-        "</button>" +
-        "<br>"
+        allAnswers.question1[i] + "</button>" + "<br>"
     );
   }
 
@@ -89,14 +87,12 @@ function question2() {
   $("#quizPage").text("");
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
-  $("#row1").append("<h1>What's a CDN?</h1>");
+  $("#row1").append("<h1>In what country is the Taj Mahal?</h1>");
 
   for (var i = 0; i < allAnswers.question2.length; i++) {
     $("#row1").append(
       '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question2[i] +
-        "</button>" +
-        "<br>"
+        allAnswers.question2[i] + "</button>" + "<br>"
     );
   }
 
@@ -116,14 +112,12 @@ function question3() {
   $("#quizPage").text("");
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
-  $("#row1").append("<h1>What do you use to link a stylesheet?</h1>");
+  $("#row1").append("<h1>What is Mohenjo Daro?</h1>");
 
   for (var i = 0; i < allAnswers.question3.length; i++) {
     $("#row1").append(
       '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question3[i] +
-        "</button>" +
-        "<br>"
+        allAnswers.question3[i] + "</button>" + "<br>"
     );
   }
 
@@ -143,14 +137,12 @@ function question4() {
   $("#quizPage").text("");
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
-  $("#row1").append("<h1>What do you use to link a stylesheet?</h1>");
+  $("#row1").append("<h1>Which city is known as the culinary capital of South America?</h1>");
 
   for (var i = 0; i < allAnswers.question4.length; i++) {
     $("#row1").append(
       '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question4[i] +
-        "</button>" +
-        "<br>"
+        allAnswers.question4[i] + "</button>" + "<br>"
     );
   }
 
@@ -170,14 +162,12 @@ function question5() {
   $("#quizPage").text("");
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
-  $("#row1").append("<h1>What do you use to link a stylesheet?</h1>");
+  $("#row1").append("<h1>Where is Sagrada Familia cathedral?</h1>");
 
   for (var i = 0; i < allAnswers.question5.length; i++) {
     $("#row1").append(
       '<button class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' +
-        allAnswers.question5[i] +
-        "</button>" +
-        "<br>"
+        allAnswers.question5[i] + "</button>" + "<br>"
     );
   }
 
