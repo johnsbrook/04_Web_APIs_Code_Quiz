@@ -198,7 +198,7 @@ function youWin() {
   $("#playerList").show();
   $("#quizPage").text("");
   $("#quizPage").append(
-    '<img src="youwin.gif" alt="Bravo, You WIN!" id="youWin" class="col-sm-10 mx-auto youWin" style="height: 200px; width: auto;">'
+    '<img src="images/youwin.gif" alt="Bravo, You WIN!" id="youWin" class="col-sm-10 mx-auto youWin" style="height: 200px; width: auto;">'
   );
 }
 
@@ -207,7 +207,7 @@ function gameOver() {
   $("#playerList").show();
   $("#quizPage").text("");
   $("#quizPage").append(
-    '<img src="game-over.gif" alt="Game Over" id="gameOver" class="col-sm-10 mx-auto gameOver" style= "height: 200px; width: auto;">'
+    '<img src="images/game-over.gif" alt="Game Over" id="gameOver" class="col-sm-10 mx-auto gameOver" style= "height: 200px; width: auto;">'
   );
 }
 
