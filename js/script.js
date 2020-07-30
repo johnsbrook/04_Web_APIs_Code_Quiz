@@ -95,7 +95,7 @@ function question2() {
   $("#quizPage").text("");
   $("#finalScore").text("");
   $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
-  $("#row1").append("<h1>In what country is the Taj Mahal Hotel?</h1>");
+  $("#row1").append("<h1>In what city and country is the Taj Mahal Hotel?</h1>");
   $('#row1').append(allAnswers.images1[1]);
 
   for (var i = 0; i < allAnswers.question2.length; i++) {
