@@ -1,6 +1,6 @@
 var gameScore = 0;
 $("#score").text(gameScore);
-var secondsLeft = 30;
+var secondsLeft = 60;
 var timerCountdown;
 
 var allAnswers = {
