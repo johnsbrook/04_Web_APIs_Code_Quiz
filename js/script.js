@@ -7,49 +7,55 @@ var style = ' col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">';
 var imgStyle = ' style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;';
 
 var row1 = '<div id="row1" class="col-sm-10 mx-auto"></div>';
+
 var btnWrong = '<button class="wrong answer';
 var btnRight = '<button id="correct" class="answer'
-var endBtn = "</button>";
+var endBtn = '</button>';
+
+var imgOpen = '<div><img src="images/';
+var imgClose = '"></div>';
+
+var br = '<br>'
 
 var allAnswers = {
   question1: [
-    btnWrong + style + "a) Kensington, United Kingdom" + endBtn + "<br>",
-    btnRight + style + "b) London, United Kingdom" + endBtn + "<br>",
-    btnWrong + style + "c) London, Canada" + endBtn + "<br>",
-    btnWrong + style + 'd) Windsor, United Kingdom' + '</button>' + '<br>'
+    btnWrong + style + "a) Kensington, United Kingdom" + endBtn + br,
+    btnRight + style + "b) London, United Kingdom" + endBtn + br,
+    btnWrong + style + "c) London, Canada" + endBtn + br,
+    btnWrong + style + 'd) Windsor, United Kingdom' + endBtn + br
   ],
   question2: [
-    btnWrong + style + "a) Delhi, India" + endBtn + "<br>",
-    btnWrong + style + "b) Agra, India" + endBtn + "<br>",
-    btnWrong + style + "c) Jaipur, India" + endBtn + "<br>",
-    btnRight + style + "d) Mumbai, India" + endBtn + "<br>"
+    btnWrong + style + "a) Delhi, India" + endBtn + br,
+    btnWrong + style + "b) Agra, India" + endBtn + br,
+    btnWrong + style + "c) Jaipur, India" + endBtn + br,
+    btnRight + style + "d) Mumbai, India" + endBtn + br
   ],
   question3: [
-    btnWrong + style + 'a) A beach resort in Indonesia' + endBtn + "<br>",
-    btnWrong + style + 'b) A ruin in Cambodia' + endBtn + "<br>",
-    btnRight + style + 'c) An ancient city in Pakistan' + endBtn + "<br>",
-    btnWrong + style + 'd) A tribe in Africa' + endBtn + "<br>"
+    btnWrong + style + 'a) A beach resort in Indonesia' + endBtn + br,
+    btnWrong + style + 'b) A ruin in Cambodia' + endBtn + br,
+    btnRight + style + 'c) An ancient city in Pakistan' + endBtn + br,
+    btnWrong + style + 'd) A tribe in Africa' + endBtn + br
   ],
 
   question4: [
-    btnWrong + style + "a) Buenos Aires" + endBtn + "<br>",
-    btnRight + style + "b) Lima" + endBtn + "<br>",
-    btnWrong + style + "c) Bogota" + endBtn + "<br>",
-    btnWrong + style + "d) Rio de Janeiro" + endBtn + "<br>"
+    btnWrong + style + "a) Buenos Aires" + endBtn + br,
+    btnRight + style + "b) Lima" + endBtn + br,
+    btnWrong + style + "c) Bogota" + endBtn + br,
+    btnWrong + style + "d) Rio de Janeiro" + endBtn + br
   ],
   question5: [
-    btnWrong + style + "a) Madrid, Spain" + endBtn + "<br>",
-    btnWrong + style + "b) Mexico City, Mexico" + endBtn + "<br>",
-    btnWrong + style + "c) Lisbon, Portugal" + endBtn + "<br>",
-    btnRight + style + "d) Barcelona, Spain" + endBtn + "<br>"
+    btnWrong + style + "a) Madrid, Spain" + endBtn + br,
+    btnWrong + style + "b) Mexico City, Mexico" + endBtn + br,
+    btnWrong + style + "c) Lisbon, Portugal" + endBtn + br,
+    btnRight + style + "d) Barcelona, Spain" + endBtn + br
   ],
 
   images1: [
-    '<div><img src="images/kensington.jpg"' + imgStyle + '"></div>',
-    '<div><img src="images/taj-hotel.jpg"' + imgStyle + '"></div>',
-    '<div><img src="images/mohenjo-daro.jpg"' + imgStyle + '"></div>',
-    '<div><img src="images/lima.jpg"' + imgStyle + '"></div>',
-    '<div><img src="images/sagrada-familia.jpg"' + imgStyle + '"></div>'
+    imgOpen + 'kensington.jpg"' + imgStyle + imgClose,
+    imgOpen + 'taj-hotel.jpg"' + imgStyle + imgClose,
+    imgOpen + 'mohenjo-daro.jpg"' + imgStyle + imgClose,
+    imgOpen + 'lima.jpg"' + imgStyle + imgClose,
+    imgOpen + 'sagrada-familia.jpg"' + imgStyle + imgClose
   ]
 };
 
@@ -105,7 +111,7 @@ function question2() {
 
   for (var i = 0; i < allAnswers.question2.length; i++) {
     $("#row1").append(
-      '<span>' + allAnswers.question2[i] + "</span>" + "<br>"
+      '<span>' + allAnswers.question2[i] + "</span>"
     );
   }
 
