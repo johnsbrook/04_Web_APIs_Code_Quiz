@@ -2,7 +2,8 @@ var gameScore = 0;
 $("#score").text(gameScore);
 var secondsLeft = 60;
 var timerCountdown;
-var style = " col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"
+var style = ' col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left';
+var imgStyle = ' style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;';
 var allAnswers = {
   question1: [
     '<button class="wrong answer' + style + '">' + "a) Kensington, United Kingdom" + "</button>" + "<br>",
@@ -37,11 +38,11 @@ var allAnswers = {
   ],
 
   images1: [
-    '<div><img src="images/kensington.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
-    '<div><img src="images/taj-hotel.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
-    '<div><img src="images/mohenjo-daro.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
-    '<div><img src="images/lima.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>',
-    '<div><img src="images/sagrada-familia.jpg" style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;"></div>'
+    '<div><img src="images/kensington.jpg"' + imgStyle + '"></div>',
+    '<div><img src="images/taj-hotel.jpg"' + imgStyle + '"></div>',
+    '<div><img src="images/mohenjo-daro.jpg"' + imgStyle + '"></div>',
+    '<div><img src="images/lima.jpg"' + imgStyle + '"></div>',
+    '<div><img src="images/sagrada-familia.jpg"' + imgStyle + '"></div>'
   ]
 };
 
