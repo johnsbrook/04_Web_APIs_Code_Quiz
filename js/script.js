@@ -2,38 +2,43 @@ var gameScore = 0;
 $("#score").text(gameScore);
 var secondsLeft = 60;
 var timerCountdown;
+
 var style = ' col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left';
 var imgStyle = ' style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;';
+
+var row1 = '<div id="row1" class="col-sm-10 mx-auto"></div>'
+var btnWrong = '<button class="wrong answer'
+
 var allAnswers = {
   question1: [
-    '<button class="wrong answer' + style + '">' + "a) Kensington, United Kingdom" + "</button>" + "<br>",
+    btnWrong + style + '">' + "a) Kensington, United Kingdom" + "</button>" + "<br>",
     '<button id="correct" class="answer' + style + '">' + "b) London, United Kingdom" + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + "c) London, Canada" + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + 'd) Windsor, United Kingdom' + '</button>' + '<br>'
+    btnWrong + style + '">' + "c) London, Canada" + "</button>" + "<br>",
+    btnWrong + style + '">' + 'd) Windsor, United Kingdom' + '</button>' + '<br>'
   ],
   question2: [
-    '<button class="wrong answer' + style + '">' + "a) Delhi, India" + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + "b) Agra, India" + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + "c) Jaipur, India" + "</button>" + "<br>",
+    btnWrong + style + '">' + "a) Delhi, India" + "</button>" + "<br>",
+    btnWrong + style + '">' + "b) Agra, India" + "</button>" + "<br>",
+    btnWrong + style + '">' + "c) Jaipur, India" + "</button>" + "<br>",
     '<button id="correct" class="answer' + style + '">' + "d) Mumbai, India" + "</button>" + "<br>"
   ],
   question3: [
-    '<button class="wrong answer' + style + '">' + 'a) A beach resort in Indonesia' + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + 'b) A ruin in Cambodia' + "</button>" + "<br>",
+    btnWrong + style + '">' + 'a) A beach resort in Indonesia' + "</button>" + "<br>",
+    btnWrong + style + '">' + 'b) A ruin in Cambodia' + "</button>" + "<br>",
     '<button id="correct" class="answer' + style + '">' + 'c) An ancient city in Pakistan' + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + 'd) A tribe in Africa' + "</button>" + "<br>"
+    btnWrong + style + '">' + 'd) A tribe in Africa' + "</button>" + "<br>"
   ],
 
   question4: [
-    '<button class="wrong answer' + style + '">' + "a) Buenos Aires" + "</button>" + "<br>",
+    btnWrong + style + '">' + "a) Buenos Aires" + "</button>" + "<br>",
     '<button id="correct" class="answer' + style + '">' + "b) Lima" + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + "c) Bogota" + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + "d) Rio de Janeiro" + "</button>" + "<br>"
+    btnWrong + style + '">' + "c) Bogota" + "</button>" + "<br>",
+    btnWrong + style + '">' + "d) Rio de Janeiro" + "</button>" + "<br>"
   ],
   question5: [
-    '<button class="wrong answer' + style + '">' + "a) Madrid, Spain" + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + "b) Mexico City, Mexico" + "</button>" + "<br>",
-    '<button class="wrong answer' + style + '">' + "c) Lisbon, Portugal" + "</button>" + "<br>",
+    btnWrong + style + '">' + "a) Madrid, Spain" + "</button>" + "<br>",
+    btnWrong + style + '">' + "b) Mexico City, Mexico" + "</button>" + "<br>",
+    btnWrong + style + '">' + "c) Lisbon, Portugal" + "</button>" + "<br>",
     '<button id="correct" class="answer' + style + '">' + "d) Barcelona, Spain" + "</button>" + "<br>"
   ],
 
@@ -69,7 +74,7 @@ function timerCountdown() {
 function question1() {
   $("#quizPage").text("");
   $("#finalScore").text("");
-  $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+  $("#quizPage").append(row1);
   $("#row1").append("<h1>In which city is Kensington Palace?</h1>");
   $('#row1').append(allAnswers.images1[0]);
   for (var i = 0; i < allAnswers.question1.length; i++) {
@@ -92,7 +97,7 @@ function question1() {
 function question2() {
   $("#quizPage").text("");
   $("#finalScore").text("");
-  $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+  $("#quizPage").append(row1);
   $("#row1").append("<h1>In what city and country is the Taj Mahal Hotel?</h1>");
   $('#row1').append(allAnswers.images1[1]);
 
@@ -117,7 +122,7 @@ function question2() {
 function question3() {
   $("#quizPage").text("");
   $("#finalScore").text("");
-  $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+  $("#quizPage").append(row1);
   $("#row1").append("<h1>What is Mohenjo Daro?</h1>");
   $('#row1').append(allAnswers.images1[2]);
 
@@ -140,7 +145,7 @@ function question3() {
 function question4() {
   $("#quizPage").text("");
   $("#finalScore").text("");
-  $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+  $("#quizPage").append(row1);
   $("#row1").append("<h1>Which city is known as the culinary capital of South America?</h1>");
   $('#row1').append(allAnswers.images1[3]);
 
@@ -163,7 +168,7 @@ function question4() {
 function question5() {
   $("#quizPage").text("");
   $("#finalScore").text("");
-  $("#quizPage").append('<div id="row1" class="col-sm-10 mx-auto"></div>');
+  $("#quizPage").append(row1);
   $("#row1").append("<h1>Where is Sagrada Familia cathedral?</h1>");
   $('#row1').append(allAnswers.images1[4]);
 
