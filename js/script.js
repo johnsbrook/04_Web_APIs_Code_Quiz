@@ -2,38 +2,38 @@ var gameScore = 0;
 $("#score").text(gameScore);
 var secondsLeft = 60;
 var timerCountdown;
-
+var style = " col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left"
 var allAnswers = {
   question1: [
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "a) Kensington, United Kingdom" + "</button>" + "<br>",
-    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "b) London, United Kingdom" + "</button>" + "<br>",
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "c) London, Canada" + "</button>" + "<br>",
-    "<button class='wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left'>" + "d) Windsor, United Kingdom" + "</button>" + "<br>"
+    '<button class="wrong answer' + style + '">' + "a) Kensington, United Kingdom" + "</button>" + "<br>",
+    '<button id="correct" class="answer' + style + '">' + "b) London, United Kingdom" + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + "c) London, Canada" + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + 'd) Windsor, United Kingdom' + '</button>' + '<br>'
   ],
   question2: [
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "a) Delhi, India" + "</button>" + "<br>",
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "b) Agra, India" + "</button>" + "<br>",
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "c) Jaipur, India" + "</button>" + "<br>",
-    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "d) Mumbai, India" + "</button>" + "<br>"
+    '<button class="wrong answer' + style + '">' + "a) Delhi, India" + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + "b) Agra, India" + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + "c) Jaipur, India" + "</button>" + "<br>",
+    '<button id="correct" class="answer' + style + '">' + "d) Mumbai, India" + "</button>" + "<br>"
   ],
   question3: [
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + 'a) A beach resort in Indonesia' + "</button>" + "<br>",
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + 'b) A ruin in Cambodia' + "</button>" + "<br>",
-    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + 'c) An ancient city in Pakistan' + "</button>" + "<br>",
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + 'd) A tribe in Africa' + "</button>" + "<br>"
+    '<button class="wrong answer' + style + '">' + 'a) A beach resort in Indonesia' + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + 'b) A ruin in Cambodia' + "</button>" + "<br>",
+    '<button id="correct" class="answer' + style + '">' + 'c) An ancient city in Pakistan' + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + 'd) A tribe in Africa' + "</button>" + "<br>"
   ],
 
   question4: [
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "a) Buenos Aires" + "</button>" + "<br>",
-    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "b) Lima" + "</button>" + "<br>",
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "c) Bogota" + "</button>" + "<br>",
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "d) Rio de Janeiro" + "</button>" + "<br>"
+    '<button class="wrong answer' + style + '">' + "a) Buenos Aires" + "</button>" + "<br>",
+    '<button id="correct" class="answer' + style + '">' + "b) Lima" + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + "c) Bogota" + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + "d) Rio de Janeiro" + "</button>" + "<br>"
   ],
   question5: [
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "a) Madrid, Spain" + "</button>" + "<br>",
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "b) Mexico City, Mexico" + "</button>" + "<br>",
-    '<button class="wrong answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "c) Lisbon, Portugal" + "</button>" + "<br>",
-    '<button id="correct" class="answer col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left">' + "d) Barcelona, Spain" + "</button>" + "<br>"
+    '<button class="wrong answer' + style + '">' + "a) Madrid, Spain" + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + "b) Mexico City, Mexico" + "</button>" + "<br>",
+    '<button class="wrong answer' + style + '">' + "c) Lisbon, Portugal" + "</button>" + "<br>",
+    '<button id="correct" class="answer' + style + '">' + "d) Barcelona, Spain" + "</button>" + "<br>"
   ],
 
   images1: [
