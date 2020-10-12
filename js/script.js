@@ -6,40 +6,41 @@ var timerCountdown;
 var style = ' col-12 col-md-8 col-lg-6 mx-auto my-2 p-3 text-left';
 var imgStyle = ' style="width: 200px; height: auto; border-radius: 25px; box-shadow: 0px 0px 2px 2px lightgrey;';
 
-var row1 = '<div id="row1" class="col-sm-10 mx-auto"></div>'
-var btnWrong = '<button class="wrong answer'
+var row1 = '<div id="row1" class="col-sm-10 mx-auto"></div>';
+var btnWrong = '<button class="wrong answer';
+var endBtn = "</button>";
 
 var allAnswers = {
   question1: [
-    btnWrong + style + '">' + "a) Kensington, United Kingdom" + "</button>" + "<br>",
-    '<button id="correct" class="answer' + style + '">' + "b) London, United Kingdom" + "</button>" + "<br>",
-    btnWrong + style + '">' + "c) London, Canada" + "</button>" + "<br>",
+    btnWrong + style + '">' + "a) Kensington, United Kingdom" + endBtn + "<br>",
+    '<button id="correct" class="answer' + style + '">' + "b) London, United Kingdom" + endBtn + "<br>",
+    btnWrong + style + '">' + "c) London, Canada" + endBtn + "<br>",
     btnWrong + style + '">' + 'd) Windsor, United Kingdom' + '</button>' + '<br>'
   ],
   question2: [
-    btnWrong + style + '">' + "a) Delhi, India" + "</button>" + "<br>",
-    btnWrong + style + '">' + "b) Agra, India" + "</button>" + "<br>",
-    btnWrong + style + '">' + "c) Jaipur, India" + "</button>" + "<br>",
-    '<button id="correct" class="answer' + style + '">' + "d) Mumbai, India" + "</button>" + "<br>"
+    btnWrong + style + '">' + "a) Delhi, India" + endBtn + "<br>",
+    btnWrong + style + '">' + "b) Agra, India" + endBtn + "<br>",
+    btnWrong + style + '">' + "c) Jaipur, India" + endBtn + "<br>",
+    '<button id="correct" class="answer' + style + '">' + "d) Mumbai, India" + endBtn + "<br>"
   ],
   question3: [
-    btnWrong + style + '">' + 'a) A beach resort in Indonesia' + "</button>" + "<br>",
-    btnWrong + style + '">' + 'b) A ruin in Cambodia' + "</button>" + "<br>",
-    '<button id="correct" class="answer' + style + '">' + 'c) An ancient city in Pakistan' + "</button>" + "<br>",
-    btnWrong + style + '">' + 'd) A tribe in Africa' + "</button>" + "<br>"
+    btnWrong + style + '">' + 'a) A beach resort in Indonesia' + endBtn + "<br>",
+    btnWrong + style + '">' + 'b) A ruin in Cambodia' + endBtn + "<br>",
+    '<button id="correct" class="answer' + style + '">' + 'c) An ancient city in Pakistan' + endBtn + "<br>",
+    btnWrong + style + '">' + 'd) A tribe in Africa' + endBtn + "<br>"
   ],
 
   question4: [
-    btnWrong + style + '">' + "a) Buenos Aires" + "</button>" + "<br>",
-    '<button id="correct" class="answer' + style + '">' + "b) Lima" + "</button>" + "<br>",
-    btnWrong + style + '">' + "c) Bogota" + "</button>" + "<br>",
-    btnWrong + style + '">' + "d) Rio de Janeiro" + "</button>" + "<br>"
+    btnWrong + style + '">' + "a) Buenos Aires" + endBtn + "<br>",
+    '<button id="correct" class="answer' + style + '">' + "b) Lima" + endBtn + "<br>",
+    btnWrong + style + '">' + "c) Bogota" + endBtn + "<br>",
+    btnWrong + style + '">' + "d) Rio de Janeiro" + endBtn + "<br>"
   ],
   question5: [
-    btnWrong + style + '">' + "a) Madrid, Spain" + "</button>" + "<br>",
-    btnWrong + style + '">' + "b) Mexico City, Mexico" + "</button>" + "<br>",
-    btnWrong + style + '">' + "c) Lisbon, Portugal" + "</button>" + "<br>",
-    '<button id="correct" class="answer' + style + '">' + "d) Barcelona, Spain" + "</button>" + "<br>"
+    btnWrong + style + '">' + "a) Madrid, Spain" + endBtn + "<br>",
+    btnWrong + style + '">' + "b) Mexico City, Mexico" + endBtn + "<br>",
+    btnWrong + style + '">' + "c) Lisbon, Portugal" + endBtn + "<br>",
+    '<button id="correct" class="answer' + style + '">' + "d) Barcelona, Spain" + endBtn + "<br>"
   ],
 
   images1: [
